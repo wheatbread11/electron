@@ -1,6 +1,5 @@
 package net.wheatbread11.electron;
 
-import net.minecraft.resources.Identifier;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import net.wheatbread11.electron.registry.ModBlockEntityType;
