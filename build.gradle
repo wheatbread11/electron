@@ -1,0 +1,68 @@
+plugins {
+    id 'net.neoforged.moddev' version '2.0.140'
+}
+
+java.toolchain {
+    languageVersion = JavaLanguageVersion.of(project.java_version)
+}
+
+group = project.mod_group
+version = project.mod_version
+
+neoForge {
+    version = project.neoforge_version
+
+    runs {
+        client {
+            client()
+        }
+        server {
+            server()
+        }
+        clientData {
+            clientData()
+
+            programArguments.addAll(
+                    '--mod', project.mod_id,
+                    '--all',
+                    '--output', file('src/generated/client/resources/').getAbsolutePath(),
+                    '--existing', file('src/main/resources/').getAbsolutePath()
+            )
+        }
+        serverData {
+            serverData()
+
+            programArguments.addAll(
+                    '--mod', project.mod_id,
+                    '--all',
+                    '--output', file('src/generated/server/resources/').getAbsolutePath(),
+                    '--existing', file('src/main/resources/').getAbsolutePath()
+            )
+        }
+    }
+
+    mods {
+        electron {
+            sourceSet sourceSets.main
+        }
+    }
+}
+
+sourceSets {
+    main.resources {
+        srcDir 'src/generated/client/resources'
+        srcDir 'src/generated/server/resources'
+    }
+}
+
+processResources {
+    var props = [
+            "mod_id"        : project.mod_id,
+            "mod_version"   : project.version,
+    ]
+    inputs.properties props
+
+    filesMatching("META-INF/neoforge.mods.toml") {
+        expand props
+    }
+}
