@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube_directional",
+  "textures": {
+    "down": "electron:block/crusher_down",
+    "east": "electron:block/crusher_east",
+    "north": "electron:block/crusher_north",
+    "particle": "electron:block/crusher_up",
+    "south": "electron:block/crusher_south",
+    "up": "electron:block/crusher_up",
+    "west": "electron:block/crusher_west"
+  }
+}

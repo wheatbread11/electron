@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_electron:iron_dust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "electron:iron_dust"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "electron:iron_ingot_from_smelting_iron_dust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_electron:iron_dust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "electron:iron_ingot_from_smelting_iron_dust"
+    ]
+  }
+}

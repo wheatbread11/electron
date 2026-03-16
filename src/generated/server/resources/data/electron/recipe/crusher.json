@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "#": "minecraft:cobblestone",
+    "R": "minecraft:redstone",
+    "X": "minecraft:iron_pickaxe"
+  },
+  "pattern": [
+    "###",
+    "#X#",
+    "#R#"
+  ],
+  "result": {
+    "id": "electron:crusher"
+  }
+}

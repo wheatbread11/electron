@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "electron:block/crusher",
+      "x": 90
+    },
+    "facing=east": {
+      "model": "electron:block/crusher",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "electron:block/crusher"
+    },
+    "facing=south": {
+      "model": "electron:block/crusher",
+      "y": 180
+    },
+    "facing=up": {
+      "model": "electron:block/crusher",
+      "x": 270
+    },
+    "facing=west": {
+      "model": "electron:block/crusher",
+      "y": 270
+    }
+  }
+}

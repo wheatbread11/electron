@@ -1,0 +1,21 @@
+package net.wheatbread11.electron;
+
+import net.minecraft.resources.Identifier;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.fml.common.Mod;
+import net.wheatbread11.electron.registry.ModBlockEntityType;
+import net.wheatbread11.electron.registry.ModBlocks;
+import net.wheatbread11.electron.registry.ModItems;
+
+@Mod(Electron.MOD_ID)
+public class Electron {
+
+    public static final String MOD_ID = "electron";
+
+    public Electron(IEventBus modBus) {
+
+        ModItems.ITEMS.register(modBus);
+        ModBlocks.BLOCKS.register(modBus);
+        ModBlockEntityType.BLOCK_ENTITY_TYPE.register(modBus);
+    }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_electron:gold_dust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "electron:gold_dust"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "electron:gold_ingot_from_blasting_gold_dust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_electron:gold_dust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "electron:gold_ingot_from_blasting_gold_dust"
+    ]
+  }
+}
