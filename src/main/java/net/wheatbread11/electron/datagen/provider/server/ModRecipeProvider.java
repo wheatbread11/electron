@@ -147,7 +147,7 @@ public class ModRecipeProvider extends RecipeProvider {
                                 Identifier.fromNamespaceAndPath(
                                         Electron.MOD_ID,
                                         BuiltInRegistries.ITEM.getKey(output.asItem()).getPath()
-                                                + "_from_smelting_"
+                                                + "_from_blasting_"
                                                 + BuiltInRegistries.ITEM.getKey(input.asItem()).getPath()
                                 )
                         )
