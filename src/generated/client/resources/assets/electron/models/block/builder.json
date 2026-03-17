@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube_directional",
+  "textures": {
+    "down": "electron:block/builder_down",
+    "east": "electron:block/builder_east",
+    "north": "electron:block/builder_north",
+    "particle": "electron:block/builder_up",
+    "south": "electron:block/builder_south",
+    "up": "electron:block/builder_up",
+    "west": "electron:block/builder_west"
+  }
+}

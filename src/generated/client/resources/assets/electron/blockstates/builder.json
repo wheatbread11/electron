@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "electron:block/builder",
+      "x": 90
+    },
+    "facing=east": {
+      "model": "electron:block/builder",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "electron:block/builder"
+    },
+    "facing=south": {
+      "model": "electron:block/builder",
+      "y": 180
+    },
+    "facing=up": {
+      "model": "electron:block/builder",
+      "x": 270
+    },
+    "facing=west": {
+      "model": "electron:block/builder",
+      "y": 270
+    }
+  }
+}

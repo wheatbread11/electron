@@ -6,6 +6,7 @@ import net.minecraft.world.level.material.MapColor;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.wheatbread11.electron.Electron;
+import net.wheatbread11.electron.content.world.level.block.BuilderBlock;
 import net.wheatbread11.electron.content.world.level.block.CrusherBlock;
 
 public class ModBlocks {
@@ -21,5 +22,15 @@ public class ModBlocks {
                             .instrument(NoteBlockInstrument.BASEDRUM)
                             .requiresCorrectToolForDrops()
                             .strength(3.5F)
+            );
+    public static final DeferredBlock<BuilderBlock> BUILDER =
+            BLOCKS.registerBlock(
+                    "builder",
+                    BuilderBlock::new,
+                    () -> BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.COLOR_RED)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresCorrectToolForDrops()
+                            .strength(2.0F, 6.0F)
             );
 }

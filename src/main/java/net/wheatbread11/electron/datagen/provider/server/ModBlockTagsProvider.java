@@ -20,6 +20,7 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
     protected void addTags(HolderLookup.@NonNull Provider lookupProvider) {
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.CRUSHER.get())
+                .add(ModBlocks.BUILDER.get())
                 .replace(false);
     }
 }

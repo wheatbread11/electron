@@ -59,6 +59,24 @@ public class ModModelProvider extends ModelProvider {
                 )
         );
 
+        Block builder = ModBlocks.BUILDER.get();
+        Identifier builderModelLoc = FACING_BLOCK_TEXTURE.create(builder, blockModels.modelOutput);
+        Variant builderVariant = new Variant(builderModelLoc);
+        blockModels.blockStateOutput.accept(
+                MultiVariantGenerator.dispatch(
+                        builder,
+                        BlockModelGenerators.variant(builderVariant)
+                ).with(
+                        PropertyDispatch.modify(BlockStateProperties.FACING)
+                                .select(Direction.NORTH, BlockModelGenerators.NOP)
+                                .select(Direction.EAST, BlockModelGenerators.Y_ROT_90)
+                                .select(Direction.SOUTH, BlockModelGenerators.Y_ROT_180)
+                                .select(Direction.WEST, BlockModelGenerators.Y_ROT_270)
+                                .select(Direction.UP, BlockModelGenerators.X_ROT_270)
+                                .select(Direction.DOWN, BlockModelGenerators.X_ROT_90)
+                )
+        );
+
         itemModels.generateFlatItem(ModItems.IRON_DUST.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(ModItems.GOLD_DUST.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(ModItems.COPPER_DUST.get(), ModelTemplates.FLAT_ITEM);

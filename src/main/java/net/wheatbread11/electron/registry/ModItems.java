@@ -16,4 +16,6 @@ public class ModItems {
 
     public static final DeferredItem<BlockItem> CRUSHER =
             ITEMS.registerSimpleBlockItem("crusher", ModBlocks.CRUSHER);
+    public static final DeferredItem<BlockItem> BUILDER =
+            ITEMS.registerSimpleBlockItem("builder", ModBlocks.BUILDER);
 }

@@ -39,6 +39,18 @@ public class ModRecipeProvider extends RecipeProvider {
                 .define('R', Items.REDSTONE)
                 .unlockedBy("has_iron_pickaxe", this.has(Items.IRON_PICKAXE))
                 .save(this.output);
+        ShapedRecipeBuilder.shaped(
+                        this.registries.lookupOrThrow(Registries.ITEM),
+                        RecipeCategory.REDSTONE,
+                        ModItems.BUILDER.get().asItem()
+                )
+                .pattern("###")
+                .pattern("# #")
+                .pattern("#R#")
+                .define('#', Items.BRICKS)
+                .define('R', Items.REDSTONE)
+                .unlockedBy("has_bricks", this.has(Items.BRICKS))
+                .save(this.output);
 
         buildSmeltingRecipe(
                 ModItems.IRON_DUST.get(),

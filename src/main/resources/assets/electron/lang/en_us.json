@@ -1,5 +1,6 @@
 {
   "block.electron.crusher": "Crusher",
+  "block.electron.builder": "Builder",
 
   "item.electron.iron_dust": "Iron Dust",
   "item.electron.gold_dust": "Gold Dust",

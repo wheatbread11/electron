@@ -1,5 +1,6 @@
 {
   "values": [
-    "electron:crusher"
+    "electron:crusher",
+    "electron:builder"
   ]
 }

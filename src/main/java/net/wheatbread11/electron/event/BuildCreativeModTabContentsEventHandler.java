@@ -15,6 +15,7 @@ public class BuildCreativeModTabContentsEventHandler {
     public static void buildContents(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.REDSTONE_BLOCKS) {
             event.accept(ModBlocks.CRUSHER);
+            event.accept(ModBlocks.BUILDER);
         }
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.IRON_DUST);

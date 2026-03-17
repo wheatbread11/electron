@@ -27,5 +27,6 @@ public class ModBlockLootTableSubProvider extends BlockLootSubProvider {
     @Override
     protected void generate() {
         this.dropSelf(ModBlocks.CRUSHER.get());
+        this.dropSelf(ModBlocks.BUILDER.get());
     }
 }
