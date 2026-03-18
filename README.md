@@ -9,3 +9,4 @@ Planned Features:
 - silver ore, new resource.
 - electrum, new ingredient for useful tool.
 - electron and steel, tool that empowers anything as well as thunder.
+- copper duct, transfer items in a straight line without inner inventory.
