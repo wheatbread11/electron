@@ -10,14 +10,12 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
-import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.redstone.Orientation;
 import net.minecraft.world.level.storage.loot.LootParams;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
@@ -46,11 +44,13 @@ public class CrusherBlock extends Block {
         );
     }
 
-    public static void registerDrops(Block block, CrusherDrops drops) {
+    public static void registerDrops(@NonNull Block block, @NonNull CrusherDrops drops) {
         DROPS_REGISTRY.put(block, drops);
     }
 
-    protected static boolean isCrushable(ServerLevel level, BlockState state, BlockPos pos, ItemStack tool) {
+    protected static boolean isCrushable(
+            @NonNull ServerLevel level, @NonNull BlockState state, @NonNull BlockPos pos,
+            @NonNull ItemStack tool) {
         if (state.isAir()) return false;
         if (state.getDestroySpeed(level, pos) == -1) return false;
         if (state.requiresCorrectToolForDrops()) {
@@ -61,8 +61,8 @@ public class CrusherBlock extends Block {
     }
 
     protected static List<ItemStack> getCrushedDrops(
-            ServerLevel level, BlockState state, BlockPos pos,
-            ItemStack tool, RandomSource random
+            @NonNull ServerLevel level, @NonNull BlockState state, @NonNull BlockPos pos,
+            @NonNull ItemStack tool, @NonNull RandomSource random
     ) {
         Block block = state.getBlock();
 
@@ -84,39 +84,29 @@ public class CrusherBlock extends Block {
         }
     }
 
-    protected static List<ItemStack> crushAt(
-            ServerLevel level, BlockState state, BlockPos pos,
-            ItemStack tool, RandomSource random
+    protected static void crushFrom(
+            @NonNull ServerLevel level, @NonNull BlockState state, @NonNull BlockPos pos,
+            @NonNull RandomSource random
     ) {
-        List<ItemStack> drops = getCrushedDrops(level, state, pos, tool, random);
-        FluidState fluid = level.getFluidState(pos);
 
-        level.levelEvent(2001, pos, Block.getId(state));
-        level.setBlock(pos, Blocks.AIR.defaultBlockState(), 3);
-        if(!fluid.isEmpty()) {
-            level.setBlock(pos, fluid.createLegacyBlock(), 0);
-        }
-
-        return drops;
-    }
-
-    protected static void crushFrom(ServerLevel level, BlockState state, BlockPos pos, RandomSource random) {
         BlockPos frontPos = pos.relative(state.getValue(FACING));
         BlockState frontState = level.getBlockState(frontPos);
         ItemStack tool = new ItemStack(Items.IRON_PICKAXE);
 
-        if (isCrushable(level, frontState, frontPos, tool)) {
-            List<ItemStack> drops = crushAt(level, frontState, frontPos, tool, random);
+        if (!(isCrushable(level, frontState, frontPos, tool))) return;
 
-            Vec3 center = frontPos.getCenter();
-            for (ItemStack drop : drops) {
-                level.addFreshEntity(new ItemEntity(
-                        level,
-                        center.x, center.y, center.z,
-                        drop,
-                        0.0F, 0.0F, 0.0F
-                ));
-            }
+        List<ItemStack> drops = getCrushedDrops(level, frontState, frontPos, tool, random);
+
+        level.destroyBlock(frontPos,false, null);
+
+        Vec3 center = frontPos.getCenter();
+        for (ItemStack drop : drops) {
+            level.addFreshEntity(new ItemEntity(
+                    level,
+                    center.x, center.y, center.z,
+                    drop,
+                    0.0F, 0.0F, 0.0F
+            ));
         }
     }
 

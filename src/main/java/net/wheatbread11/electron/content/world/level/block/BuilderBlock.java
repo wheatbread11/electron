@@ -1,15 +1,11 @@
 package net.wheatbread11.electron.content.world.level.block;
 
-import com.mojang.authlib.GameProfile;
-import com.mojang.logging.LogUtils;
 import com.mojang.serialization.MapCodec;
-import net.minecraft.commands.arguments.EntityAnchorArgument;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.Containers;
-import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -28,12 +24,9 @@ import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.redstone.Orientation;
 import net.minecraft.world.phys.BlockHitResult;
-import net.neoforged.neoforge.common.util.FakePlayer;
 import net.wheatbread11.electron.content.world.level.block.entity.BuilderBlockEntity;
 import org.jspecify.annotations.NonNull;
 import org.jspecify.annotations.Nullable;
-
-import java.util.UUID;
 
 public class BuilderBlock extends BaseEntityBlock {
 
@@ -51,37 +44,40 @@ public class BuilderBlock extends BaseEntityBlock {
         );
     }
 
-    protected void buildFrom(ServerLevel level, BlockState state, BlockPos pos, RandomSource random) {
-        BuilderBlockEntity blockEntity = (BuilderBlockEntity) level.getBlockEntity(pos);
+    protected void buildFrom(@NonNull ServerLevel level, @NonNull BlockState state, @NonNull BlockPos pos) {
 
-        if (blockEntity != null) {
-            int slot = blockEntity.getBlockAvailableSlot();
-            if (slot >= 0) {
-                ItemStack itemStack = blockEntity.getItem(slot);
+        Direction facing = state.getValue(FACING);
+        BlockPos frontPos = pos.relative(facing);
 
-                if (itemStack.getItem() instanceof BlockItem blockItem) {
-                    Direction facing = state.getValue(FACING);
-                    BlockPos frontPos = pos.relative(facing);
-                    FakePlayer fakePlayer = new FakePlayer(
-                            level,
-                            new GameProfile(UUID.nameUUIDFromBytes("builder".getBytes()), "builder")
-                    );
-                    fakePlayer.lookAt(EntityAnchorArgument.Anchor.EYES, facing.getUnitVec3());
+        if (!level.getBlockState(frontPos).isAir()) return;
 
-                    if (level.getBlockState(frontPos).isAir()) {
-                        BlockPlaceContext blockPlaceContext = new BlockPlaceContext(
-                                level,
-                                fakePlayer,
-                                InteractionHand.MAIN_HAND,
-                                itemStack,
-                                new BlockHitResult(frontPos.getCenter(), facing, frontPos, false)
-                        );
+        BlockEntity blockEntity = level.getBlockEntity(pos);
+        if (!(blockEntity instanceof BuilderBlockEntity builderBlockEntity)) return;
 
-                        blockItem.place(blockPlaceContext);
-                    }
-                }
-            }
+        int slot = builderBlockEntity.getBlockAvailableSlot();
+        if (slot < 0) return;
+
+        ItemStack stack = builderBlockEntity.getItem(slot);
+        if (!(stack.getItem() instanceof BlockItem blockItem)) return;
+
+        Block placeBlock = blockItem.getBlock();
+        BlockState placeState = placeBlock.defaultBlockState();
+
+        if (placeState.hasProperty(BlockStateProperties.FACING)) {
+            placeState = placeState.setValue(BlockStateProperties.FACING, facing);
         }
+
+        if (!placeState.canSurvive(level, frontPos)) return;
+
+        level.setBlock(frontPos, placeState, 3);
+
+        BlockEntity newBlockEntity = level.getBlockEntity(frontPos);
+        if (newBlockEntity != null && !stack.getComponents().isEmpty()) {
+            newBlockEntity.applyComponents(stack.getComponents(), stack.getComponentsPatch());
+            newBlockEntity.setChanged();
+        }
+
+        stack.shrink(1);
     }
 
     @Override
@@ -123,7 +119,7 @@ public class BuilderBlock extends BaseEntityBlock {
             @NonNull BlockState state, @NonNull ServerLevel level, @NonNull BlockPos pos,
             @NonNull RandomSource random
     ) {
-        this.buildFrom(level, state, pos, random);
+        this.buildFrom(level, state, pos);
     }
 
     @Override
