@@ -28,5 +28,8 @@ public class ModBlockLootTableSubProvider extends BlockLootSubProvider {
     protected void generate() {
         this.dropSelf(ModBlocks.CRUSHER.get());
         this.dropSelf(ModBlocks.BUILDER.get());
+
+        this.dropSelf(ModBlocks.SILVER_BLOCK.get());
+        this.dropSelf(ModBlocks.RAW_SILVER_BLOCK.get());
     }
 }

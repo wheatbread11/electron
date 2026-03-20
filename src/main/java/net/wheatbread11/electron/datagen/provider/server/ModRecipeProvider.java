@@ -49,9 +49,9 @@ public class ModRecipeProvider extends RecipeProvider {
     protected void buildRecipes() {
 
         ShapedRecipeBuilder.shaped(
-                    this.registries.lookupOrThrow(Registries.ITEM),
-                    RecipeCategory.REDSTONE,
-                    ModItems.CRUSHER
+                this.registries.lookupOrThrow(Registries.ITEM),
+                        RecipeCategory.REDSTONE,
+                        ModItems.CRUSHER
                 )
                 .pattern("###")
                 .pattern("#X#")
@@ -63,7 +63,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .save(this.output);
 
         ShapedRecipeBuilder.shaped(
-                        this.registries.lookupOrThrow(Registries.ITEM),
+                this.registries.lookupOrThrow(Registries.ITEM),
                         RecipeCategory.REDSTONE,
                         ModItems.BUILDER
                 )
@@ -75,6 +75,19 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_bricks", this.has(Items.BRICKS))
                 .save(this.output);
 
+        buildCompactingCraftRecipe(
+                ModItems.SILVER_NUGGET,
+                ModItems.SILVER_INGOT
+        );
+        buildCompactingCraftRecipe(
+                ModItems.SILVER_INGOT,
+                ModItems.SILVER_BLOCK
+        );
+        buildCompactingCraftRecipe(
+                ModItems.RAW_SILVER,
+                ModItems.RAW_SILVER_BLOCK
+        );
+
         buildSmeltingAndBlastingRecipe(
                 ModItems.IRON_DUST,
                 RecipeCategory.MISC,
@@ -83,7 +96,6 @@ public class ModRecipeProvider extends RecipeProvider {
                 0.2F,
                 200
         );
-
         buildSmeltingAndBlastingRecipe(
                 ModItems.GOLD_DUST,
                 RecipeCategory.MISC,
@@ -92,7 +104,6 @@ public class ModRecipeProvider extends RecipeProvider {
                 0.2F,
                 200
         );
-
         buildSmeltingAndBlastingRecipe(
                 ModItems.COPPER_DUST,
                 RecipeCategory.MISC,
@@ -101,6 +112,68 @@ public class ModRecipeProvider extends RecipeProvider {
                 0.2F,
                 200
         );
+        buildSmeltingAndBlastingRecipe(
+                ModItems.SILVER_DUST,
+                RecipeCategory.MISC,
+                CookingBookCategory.MISC,
+                ModItems.SILVER_INGOT,
+                0.2F,
+                200
+        );
+
+        buildSmeltingAndBlastingRecipe(
+                ModItems.RAW_SILVER,
+                RecipeCategory.MISC,
+                CookingBookCategory.MISC,
+                ModItems.SILVER_INGOT,
+                0.7F,
+                200
+        );
+    }
+
+    protected void buildCompactingCraftRecipe(
+            ItemLike input,
+            ItemLike output
+    ) {
+        ShapelessRecipeBuilder.shapeless(
+                    this.registries.lookupOrThrow(Registries.ITEM),
+                    RecipeCategory.MISC,
+                    output
+            )
+            .requires(input, 9)
+            .unlockedBy("has_" + BuiltInRegistries.ITEM.getKey(input.asItem()), this.has(input))
+            .save(
+                    this.output,
+                    ResourceKey.create(
+                            Registries.RECIPE,
+                            Identifier.fromNamespaceAndPath(
+                                    Electron.MOD_ID,
+                                    BuiltInRegistries.ITEM.getKey(output.asItem()).getPath()
+                                        + "_from_"
+                                        + BuiltInRegistries.ITEM.getKey(input.asItem()).getPath()
+                            )
+                    )
+            );
+
+        ShapelessRecipeBuilder.shapeless(
+                        this.registries.lookupOrThrow(Registries.ITEM),
+                        RecipeCategory.MISC,
+                        input, 9
+                )
+                .requires(output)
+                .unlockedBy("has_" + BuiltInRegistries.ITEM.getKey(output.asItem()), this.has(output))
+                .save(
+                        this.output,
+                        ResourceKey.create(
+                                Registries.RECIPE,
+                                Identifier.fromNamespaceAndPath(
+                                        Electron.MOD_ID,
+                                        BuiltInRegistries.ITEM.getKey(input.asItem()).getPath()
+                                                + "_from_"
+                                                + BuiltInRegistries.ITEM.getKey(output.asItem()).getPath()
+                                )
+                        )
+                );
     }
 
     protected void buildSmeltingAndBlastingRecipe(

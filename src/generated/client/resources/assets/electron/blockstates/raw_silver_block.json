@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "electron:block/raw_silver_block"
+    }
+  }
+}

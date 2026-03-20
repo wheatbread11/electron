@@ -23,13 +23,24 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         this.tag(ItemTags.create(Identifier.fromNamespaceAndPath("c", "dusts/iron")))
                 .add(ModItems.IRON_DUST.get())
                 .replace(false);
-
         this.tag(ItemTags.create(Identifier.fromNamespaceAndPath("c", "dusts/gold")))
                 .add(ModItems.GOLD_DUST.get())
                 .replace(false);
-
         this.tag(ItemTags.create(Identifier.fromNamespaceAndPath("c", "dusts/copper")))
                 .add(ModItems.COPPER_DUST.get())
+                .replace(false);
+        this.tag(ItemTags.create(Identifier.fromNamespaceAndPath("c", "dusts/silver")))
+                .add(ModItems.SILVER_DUST.get())
+                .replace(false);
+
+        this.tag(ItemTags.create(Identifier.fromNamespaceAndPath("c", "ingots/silver")))
+                .add(ModItems.SILVER_INGOT.get())
+                .replace(false);
+        this.tag(ItemTags.create(Identifier.fromNamespaceAndPath("c", "nuggets/silver")))
+                .add(ModItems.SILVER_NUGGET.get())
+                .replace(false);
+        this.tag(ItemTags.create(Identifier.fromNamespaceAndPath("c", "raw_materials/silver")))
+                .add(ModItems.RAW_SILVER.get())
                 .replace(false);
     }
 }

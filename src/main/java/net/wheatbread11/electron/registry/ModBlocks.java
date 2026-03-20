@@ -1,5 +1,7 @@
 package net.wheatbread11.electron.registry;
 
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
@@ -32,5 +34,27 @@ public class ModBlocks {
                             .instrument(NoteBlockInstrument.BASEDRUM)
                             .requiresCorrectToolForDrops()
                             .strength(2.0F, 6.0F)
+            );
+
+    public static final DeferredBlock<Block> SILVER_BLOCK =
+            BLOCKS.registerBlock(
+                    "silver_block",
+                    Block::new,
+                    () -> BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.COLOR_LIGHT_GRAY)
+                            .instrument(NoteBlockInstrument.BELL)
+                            .requiresCorrectToolForDrops()
+                            .strength(3.0F, 6.0F)
+                            .sound(SoundType.METAL)
+            );
+    public static final DeferredBlock<Block> RAW_SILVER_BLOCK =
+            BLOCKS.registerBlock(
+                    "raw_silver_block",
+                    Block::new,
+                    () -> BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.COLOR_LIGHT_GRAY)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresCorrectToolForDrops()
+                            .strength(5.0F, 6.0F)
             );
 }

@@ -13,6 +13,12 @@ public class BuildCreativeModTabContentsEventHandler {
 
     @SubscribeEvent
     public static void buildContents(BuildCreativeModeTabContentsEvent event) {
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.SILVER_BLOCK);
+        }
+        if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
+            event.accept(ModBlocks.RAW_SILVER_BLOCK);
+        }
         if (event.getTabKey() == CreativeModeTabs.REDSTONE_BLOCKS) {
             event.accept(ModBlocks.CRUSHER);
             event.accept(ModBlocks.BUILDER);
@@ -21,6 +27,10 @@ public class BuildCreativeModTabContentsEventHandler {
             event.accept(ModItems.IRON_DUST);
             event.accept(ModItems.GOLD_DUST);
             event.accept(ModItems.COPPER_DUST);
+            event.accept(ModItems.SILVER_DUST);
+            event.accept(ModItems.SILVER_INGOT);
+            event.accept(ModItems.SILVER_NUGGET);
+            event.accept(ModItems.RAW_SILVER);
         }
     }
 }

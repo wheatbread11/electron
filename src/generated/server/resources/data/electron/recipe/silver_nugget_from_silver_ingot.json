@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "electron:silver_ingot"
+  ],
+  "result": {
+    "count": 9,
+    "id": "electron:silver_nugget"
+  }
+}

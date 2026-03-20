@@ -3,6 +3,7 @@ package net.wheatbread11.electron.content.core.crusher;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Blocks;
 import net.wheatbread11.electron.content.world.level.block.CrusherBlock;
+import net.wheatbread11.electron.registry.ModBlocks;
 import net.wheatbread11.electron.registry.ModItems;
 
 public class CrusherDropsRegisterDefault {
@@ -79,6 +80,13 @@ public class CrusherDropsRegisterDefault {
                 new CrusherBundledDrops(
                         new CrusherPlainDrops(ModItems.COPPER_DUST.get(), 12),
                         new CrusherChanceDrops(ModItems.COPPER_DUST.get(), 4, 0.5F)
+                )
+        );
+        CrusherBlock.registerDrops(
+                ModBlocks.RAW_SILVER_BLOCK.get(),
+                new CrusherBundledDrops(
+                        new CrusherPlainDrops(ModItems.SILVER_DUST.get(), 12),
+                        new CrusherChanceDrops(ModItems.SILVER_DUST.get(), 4, 0.5F)
                 )
         );
     }

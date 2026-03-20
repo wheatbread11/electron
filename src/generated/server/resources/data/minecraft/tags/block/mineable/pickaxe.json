@@ -1,6 +1,8 @@
 {
   "values": [
     "electron:crusher",
-    "electron:builder"
+    "electron:builder",
+    "electron:silver_block",
+    "electron:raw_silver_block"
   ]
 }
