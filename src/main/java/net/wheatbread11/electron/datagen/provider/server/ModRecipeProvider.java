@@ -19,6 +19,28 @@ import java.util.concurrent.CompletableFuture;
 
 public class ModRecipeProvider extends RecipeProvider {
 
+    public static class Runner extends RecipeProvider.Runner {
+
+        public Runner(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider) {
+            super(output, lookupProvider);
+        }
+
+        @Override
+        @NonNull
+        protected RecipeProvider createRecipeProvider(
+                HolderLookup.@NonNull Provider provider,
+                @NonNull RecipeOutput output
+        ) {
+            return new ModRecipeProvider(provider, output);
+        }
+
+        @Override
+        @NonNull
+        public String getName() {
+            return Electron.MOD_ID;
+        }
+    }
+
     protected ModRecipeProvider(HolderLookup.Provider registries, RecipeOutput output) {
         super(registries, output);
     }
@@ -29,7 +51,7 @@ public class ModRecipeProvider extends RecipeProvider {
         ShapedRecipeBuilder.shaped(
                     this.registries.lookupOrThrow(Registries.ITEM),
                     RecipeCategory.REDSTONE,
-                    ModItems.CRUSHER.get().asItem()
+                    ModItems.CRUSHER
                 )
                 .pattern("###")
                 .pattern("#X#")
@@ -39,10 +61,11 @@ public class ModRecipeProvider extends RecipeProvider {
                 .define('R', Items.REDSTONE)
                 .unlockedBy("has_iron_pickaxe", this.has(Items.IRON_PICKAXE))
                 .save(this.output);
+
         ShapedRecipeBuilder.shaped(
                         this.registries.lookupOrThrow(Registries.ITEM),
                         RecipeCategory.REDSTONE,
-                        ModItems.BUILDER.get().asItem()
+                        ModItems.BUILDER
                 )
                 .pattern("###")
                 .pattern("# #")
@@ -52,56 +75,44 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_bricks", this.has(Items.BRICKS))
                 .save(this.output);
 
-        buildSmeltingRecipe(
-                ModItems.IRON_DUST.get(),
+        buildSmeltingAndBlastingRecipe(
+                ModItems.IRON_DUST,
                 RecipeCategory.MISC,
                 CookingBookCategory.MISC,
                 Items.IRON_INGOT,
                 0.2F,
                 200
         );
-        buildBlastingRecipe(
-                ModItems.IRON_DUST.get(),
-                RecipeCategory.MISC,
-                CookingBookCategory.MISC,
-                Items.IRON_INGOT,
-                0.2F,
-                100
-        );
 
-        buildSmeltingRecipe(
-                ModItems.GOLD_DUST.get(),
+        buildSmeltingAndBlastingRecipe(
+                ModItems.GOLD_DUST,
                 RecipeCategory.MISC,
                 CookingBookCategory.MISC,
                 Items.GOLD_INGOT,
                 0.2F,
                 200
         );
-        buildBlastingRecipe(
-                ModItems.GOLD_DUST.get(),
-                RecipeCategory.MISC,
-                CookingBookCategory.MISC,
-                Items.GOLD_INGOT,
-                0.2F,
-                100
-        );
 
-        buildSmeltingRecipe(
-                ModItems.COPPER_DUST.get(),
+        buildSmeltingAndBlastingRecipe(
+                ModItems.COPPER_DUST,
                 RecipeCategory.MISC,
                 CookingBookCategory.MISC,
                 Items.COPPER_INGOT,
                 0.2F,
                 200
         );
-        buildBlastingRecipe(
-                ModItems.COPPER_DUST.get(),
-                RecipeCategory.MISC,
-                CookingBookCategory.MISC,
-                Items.COPPER_INGOT,
-                0.2F,
-                100
-        );
+    }
+
+    protected void buildSmeltingAndBlastingRecipe(
+            ItemLike input,
+            RecipeCategory recipeCategory,
+            CookingBookCategory cookingBookCategory,
+            ItemLike output,
+            float exp,
+            int baseCookTime
+    ) {
+        buildSmeltingRecipe(input, recipeCategory, cookingBookCategory, output, exp, baseCookTime);
+        buildBlastingRecipe(input, recipeCategory, cookingBookCategory, output, exp, baseCookTime / 2);
     }
 
     protected void buildSmeltingRecipe(
@@ -164,27 +175,5 @@ public class ModRecipeProvider extends RecipeProvider {
                                 )
                         )
                 );
-    }
-
-    public static class Runner extends RecipeProvider.Runner {
-
-        public Runner(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider) {
-            super(output, lookupProvider);
-        }
-
-        @Override
-        @NonNull
-        protected RecipeProvider createRecipeProvider(
-                HolderLookup.@NonNull Provider provider,
-                @NonNull RecipeOutput output
-        ) {
-            return new ModRecipeProvider(provider, output);
-        }
-
-        @Override
-        @NonNull
-        public String getName() {
-            return Electron.MOD_ID;
-        }
     }
 }
