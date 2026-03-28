@@ -1,0 +1,16 @@
+{
+  "block.electron.crusher": "粉砕機",
+  "block.electron.builder": "自動建築機",
+
+  "block.electron.silver_block": "銀のブロック",
+  "block.electron.raw_silver_block": "銀の原石ブロック",
+
+  "item.electron.iron_dust": "鉄の粉",
+  "item.electron.gold_dust": "金の粉",
+  "item.electron.copper_dust": "銅の粉",
+  "item.electron.silver_dust": "銀の粉",
+
+  "item.electron.silver_ingot": "銀のインゴット",
+  "item.electron.silver_nugget": "銀塊",
+  "item.electron.raw_silver": "銀の原石"
+}
