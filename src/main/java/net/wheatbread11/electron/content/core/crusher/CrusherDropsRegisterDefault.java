@@ -62,6 +62,10 @@ public class CrusherDropsRegisterDefault {
                 new CrusherPlainDrops(Items.RESIN_BRICK, 4)
         );
         CrusherBlock.registerDrops(
+                Blocks.AMETHYST_BLOCK,
+                new CrusherPlainDrops(Items.AMETHYST_SHARD, 4)
+        );
+        CrusherBlock.registerDrops(
                 Blocks.RAW_IRON_BLOCK,
                 new CrusherBundledDrops(
                         new CrusherPlainDrops(ModItems.IRON_DUST.get(), 12),
