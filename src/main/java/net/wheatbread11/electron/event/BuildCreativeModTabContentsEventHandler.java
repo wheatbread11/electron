@@ -24,13 +24,13 @@ public class BuildCreativeModTabContentsEventHandler {
             event.accept(ModBlocks.BUILDER);
         }
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.RAW_SILVER);
+            event.accept(ModItems.SILVER_NUGGET);
+            event.accept(ModItems.SILVER_INGOT);
             event.accept(ModItems.IRON_DUST);
             event.accept(ModItems.GOLD_DUST);
             event.accept(ModItems.COPPER_DUST);
             event.accept(ModItems.SILVER_DUST);
-            event.accept(ModItems.SILVER_INGOT);
-            event.accept(ModItems.SILVER_NUGGET);
-            event.accept(ModItems.RAW_SILVER);
         }
     }
 }
