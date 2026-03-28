@@ -24,6 +24,10 @@ public class ModItems {
     public static final DeferredItem<BlockItem> BUILDER =
             ITEMS.registerSimpleBlockItem("builder", ModBlocks.BUILDER);
 
+    public static final DeferredItem<BlockItem> SILVER_ORE =
+            ITEMS.registerSimpleBlockItem("silver_ore", ModBlocks.SILVER_ORE);
+    public static final DeferredItem<BlockItem> DEEPSLATE_SILVER_ORE =
+            ITEMS.registerSimpleBlockItem("deepslate_silver_ore", ModBlocks.DEEPSLATE_SILVER_ORE);
     public static final DeferredItem<BlockItem> SILVER_BLOCK =
             ITEMS.registerSimpleBlockItem("silver_block", ModBlocks.SILVER_BLOCK);
     public static final DeferredItem<BlockItem> RAW_SILVER_BLOCK =

@@ -77,6 +77,8 @@ public class ModModelProvider extends ModelProvider {
                 )
         );
 
+        blockModels.createTrivialCube(ModBlocks.SILVER_ORE.get());
+        blockModels.createTrivialCube(ModBlocks.DEEPSLATE_SILVER_ORE.get());
         blockModels.createTrivialCube(ModBlocks.SILVER_BLOCK.get());
         blockModels.createTrivialCube(ModBlocks.RAW_SILVER_BLOCK.get());
 

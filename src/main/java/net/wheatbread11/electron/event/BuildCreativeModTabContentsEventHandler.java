@@ -17,6 +17,8 @@ public class BuildCreativeModTabContentsEventHandler {
             event.accept(ModBlocks.SILVER_BLOCK);
         }
         if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
+            event.accept(ModBlocks.SILVER_ORE);
+            event.accept(ModBlocks.DEEPSLATE_SILVER_ORE);
             event.accept(ModBlocks.RAW_SILVER_BLOCK);
         }
         if (event.getTabKey() == CreativeModeTabs.REDSTONE_BLOCKS) {

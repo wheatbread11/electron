@@ -1,7 +1,5 @@
 {
   "values": [
-    "electron:crusher",
-    "electron:builder",
     "electron:silver_ore",
     "electron:deepslate_silver_ore",
     "electron:silver_block",

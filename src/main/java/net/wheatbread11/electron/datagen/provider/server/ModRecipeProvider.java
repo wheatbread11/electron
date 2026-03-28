@@ -89,6 +89,22 @@ public class ModRecipeProvider extends RecipeProvider {
         );
 
         buildSmeltingAndBlastingRecipe(
+                ModItems.SILVER_ORE,
+                RecipeCategory.MISC,
+                CookingBookCategory.MISC,
+                ModItems.SILVER_INGOT,
+                0.7F,
+                200
+        );
+        buildSmeltingAndBlastingRecipe(
+                ModItems.DEEPSLATE_SILVER_ORE,
+                RecipeCategory.MISC,
+                CookingBookCategory.MISC,
+                ModItems.SILVER_INGOT,
+                0.7F,
+                200
+        );
+        buildSmeltingAndBlastingRecipe(
                 ModItems.IRON_DUST,
                 RecipeCategory.MISC,
                 CookingBookCategory.MISC,

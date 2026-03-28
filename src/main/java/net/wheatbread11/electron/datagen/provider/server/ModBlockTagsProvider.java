@@ -22,10 +22,23 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.CRUSHER.get())
                 .add(ModBlocks.BUILDER.get())
+                .add(ModBlocks.SILVER_ORE.get())
+                .add(ModBlocks.DEEPSLATE_SILVER_ORE.get())
                 .add(ModBlocks.SILVER_BLOCK.get())
                 .add(ModBlocks.RAW_SILVER_BLOCK.get())
                 .replace(false);
 
+        this.tag(BlockTags.NEEDS_IRON_TOOL)
+                .add(ModBlocks.SILVER_ORE.get())
+                .add(ModBlocks.DEEPSLATE_SILVER_ORE.get())
+                .add(ModBlocks.SILVER_BLOCK.get())
+                .add(ModBlocks.RAW_SILVER_BLOCK.get())
+                .replace(false);
+
+        this.tag(BlockTags.create(Identifier.fromNamespaceAndPath("c", "ores/silver")))
+                .add(ModBlocks.SILVER_ORE.get())
+                .add(ModBlocks.DEEPSLATE_SILVER_ORE.get())
+                .replace(false);
         this.tag(BlockTags.create(Identifier.fromNamespaceAndPath("c", "storage_blocks/silver")))
                 .add(ModBlocks.SILVER_BLOCK.get())
                 .replace(false);
