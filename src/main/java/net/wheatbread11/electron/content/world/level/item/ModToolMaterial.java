@@ -10,5 +10,5 @@ public class ModToolMaterial {
             ModBlockTags.INCORRECT_FOR_SILVER_TOOL,
             32, 12.0F, 0.0F, 22,
             ModItemTags.SILVER_TOOL_MATERIALS
-            );
+    );
 }
