@@ -45,5 +45,11 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         this.tag(BlockTags.create(Identifier.fromNamespaceAndPath("c", "storage_blocks/raw_silver")))
                 .add(ModBlocks.RAW_SILVER_BLOCK.get())
                 .replace(false);
+
+        this.tag(BlockTags.create(Identifier.fromNamespaceAndPath("electron", "incorrect_for_silver_tool")))
+                .addTag(BlockTags.NEEDS_DIAMOND_TOOL)
+                .addTag(BlockTags.NEEDS_IRON_TOOL)
+                .addTag(BlockTags.NEEDS_STONE_TOOL)
+                .replace(false);
     }
 }

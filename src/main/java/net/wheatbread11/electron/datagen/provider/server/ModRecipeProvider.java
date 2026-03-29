@@ -13,6 +13,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 import net.wheatbread11.electron.Electron;
 import net.wheatbread11.electron.registry.ModItems;
+import net.wheatbread11.electron.tags.ModItemTags;
 import org.jspecify.annotations.NonNull;
 
 import java.util.concurrent.CompletableFuture;
@@ -61,7 +62,6 @@ public class ModRecipeProvider extends RecipeProvider {
                 .define('R', Items.REDSTONE)
                 .unlockedBy("has_iron_pickaxe", this.has(Items.IRON_PICKAXE))
                 .save(this.output);
-
         ShapedRecipeBuilder.shaped(
                 this.registries.lookupOrThrow(Registries.ITEM),
                         RecipeCategory.REDSTONE,
@@ -87,6 +87,67 @@ public class ModRecipeProvider extends RecipeProvider {
                 ModItems.RAW_SILVER,
                 ModItems.RAW_SILVER_BLOCK
         );
+
+        ShapedRecipeBuilder.shaped(
+                        this.registries.lookupOrThrow(Registries.ITEM),
+                        RecipeCategory.COMBAT,
+                        ModItems.SILVER_SWORD
+                )
+                .pattern("X")
+                .pattern("X")
+                .pattern("#")
+                .define('#', Items.STICK)
+                .define('X', ModItemTags.SILVER_TOOL_MATERIALS)
+                .unlockedBy("has_silver_ingot", this.has(ModItemTags.SILVER_TOOL_MATERIALS))
+                .save(this.output);
+        ShapedRecipeBuilder.shaped(
+                        this.registries.lookupOrThrow(Registries.ITEM),
+                        RecipeCategory.TOOLS,
+                        ModItems.SILVER_SHOVEL
+                )
+                .pattern("X")
+                .pattern("#")
+                .pattern("#")
+                .define('#', Items.STICK)
+                .define('X', ModItemTags.SILVER_TOOL_MATERIALS)
+                .unlockedBy("has_silver_ingot", this.has(ModItemTags.SILVER_TOOL_MATERIALS))
+                .save(this.output);
+        ShapedRecipeBuilder.shaped(
+                        this.registries.lookupOrThrow(Registries.ITEM),
+                        RecipeCategory.TOOLS,
+                        ModItems.SILVER_PICKAXE
+                )
+                .pattern("XXX")
+                .pattern(" # ")
+                .pattern(" # ")
+                .define('#', Items.STICK)
+                .define('X', ModItemTags.SILVER_TOOL_MATERIALS)
+                .unlockedBy("has_silver_ingot", this.has(ModItemTags.SILVER_TOOL_MATERIALS))
+                .save(this.output);
+        ShapedRecipeBuilder.shaped(
+                        this.registries.lookupOrThrow(Registries.ITEM),
+                        RecipeCategory.TOOLS,
+                        ModItems.SILVER_AXE
+                )
+                .pattern("XX")
+                .pattern("X#")
+                .pattern(" #")
+                .define('#', Items.STICK)
+                .define('X', ModItemTags.SILVER_TOOL_MATERIALS)
+                .unlockedBy("has_silver_ingot", this.has(ModItemTags.SILVER_TOOL_MATERIALS))
+                .save(this.output);
+        ShapedRecipeBuilder.shaped(
+                        this.registries.lookupOrThrow(Registries.ITEM),
+                        RecipeCategory.TOOLS,
+                        ModItems.SILVER_HOE
+                )
+                .pattern("XX")
+                .pattern(" #")
+                .pattern(" #")
+                .define('#', Items.STICK)
+                .define('X', ModItemTags.SILVER_TOOL_MATERIALS)
+                .unlockedBy("has_silver_ingot", this.has(ModItemTags.SILVER_TOOL_MATERIALS))
+                .save(this.output);
 
         buildSmeltingAndBlastingRecipe(
                 ModItems.SILVER_ORE,

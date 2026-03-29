@@ -1,10 +1,10 @@
 package net.wheatbread11.electron.registry;
 
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
+import net.minecraft.world.item.*;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.wheatbread11.electron.Electron;
+import net.wheatbread11.electron.content.world.level.item.ModToolMaterial;
 
 public class ModItems {
 
@@ -18,6 +18,34 @@ public class ModItems {
     public static final DeferredItem<Item> SILVER_INGOT = ITEMS.registerSimpleItem("silver_ingot");
     public static final DeferredItem<Item> SILVER_NUGGET = ITEMS.registerSimpleItem("silver_nugget");
     public static final DeferredItem<Item> RAW_SILVER = ITEMS.registerSimpleItem("raw_silver");
+
+    public static final DeferredItem<Item> SILVER_SWORD =
+            ITEMS.registerItem(
+                    "silver_sword",
+                    Item::new,
+                    () -> new Item.Properties().sword(ModToolMaterial.SILVER, 3.0F, -2.4F)
+            );
+    public static final DeferredItem<ShovelItem> SILVER_SHOVEL =
+            ITEMS.registerItem(
+                    "silver_shovel",
+                    p -> new ShovelItem(ModToolMaterial.SILVER, 1.5F, -3.0F, p)
+            );
+    public static final DeferredItem<Item> SILVER_PICKAXE =
+            ITEMS.registerItem(
+                    "silver_pickaxe",
+                    Item::new,
+                    () -> new Item.Properties().pickaxe(ModToolMaterial.SILVER, 1.0F, -2.8F)
+            );
+    public static final DeferredItem<AxeItem> SILVER_AXE =
+            ITEMS.registerItem(
+                    "silver_axe",
+                    p -> new AxeItem(ModToolMaterial.SILVER, 6.0F, -3.0F, p)
+            );
+    public static final DeferredItem<HoeItem> SILVER_HOE =
+            ITEMS.registerItem(
+                    "silver_hoe",
+                    p -> new HoeItem(ModToolMaterial.SILVER, 0.0F, -3.0F, p)
+            );
 
     public static final DeferredItem<BlockItem> CRUSHER =
             ITEMS.registerSimpleBlockItem("crusher", ModBlocks.CRUSHER);

@@ -12,5 +12,11 @@
 
   "item.electron.silver_ingot": "Silver Ingot",
   "item.electron.silver_nugget": "Silver Nugget",
-  "item.electron.raw_silver": "Raw Silver"
+  "item.electron.raw_silver": "Raw Silver",
+
+  "item.electron.silver_sword": "Silver Sword",
+  "item.electron.silver_shovel": "Silver Shovel",
+  "item.electron.silver_pickaxe": "Silver Pickaxe",
+  "item.electron.silver_axe": "Silver Axe",
+  "item.electron.silver_hoe": "Silver Hoe"
 }

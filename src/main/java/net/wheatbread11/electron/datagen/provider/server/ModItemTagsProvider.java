@@ -42,5 +42,9 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         this.tag(ItemTags.create(Identifier.fromNamespaceAndPath("c", "raw_materials/silver")))
                 .add(ModItems.RAW_SILVER.get())
                 .replace(false);
+
+        this.tag(ItemTags.create(Identifier.fromNamespaceAndPath("electron", "silver_tool_materials")))
+                .addTag(ItemTags.create(Identifier.fromNamespaceAndPath("c", "ingots/silver")))
+                .replace(false);
     }
 }

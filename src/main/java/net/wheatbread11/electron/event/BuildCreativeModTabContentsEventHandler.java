@@ -25,6 +25,16 @@ public class BuildCreativeModTabContentsEventHandler {
             event.accept(ModBlocks.CRUSHER);
             event.accept(ModBlocks.BUILDER);
         }
+        if (event.getTabKey() == CreativeModeTabs.COMBAT) {
+            event.accept(ModItems.SILVER_SWORD);
+            event.accept(ModItems.SILVER_AXE);
+        }
+        if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
+            event.accept(ModItems.SILVER_SHOVEL);
+            event.accept(ModItems.SILVER_PICKAXE);
+            event.accept(ModItems.SILVER_AXE);
+            event.accept(ModItems.SILVER_HOE);
+        }
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.RAW_SILVER);
             event.accept(ModItems.SILVER_NUGGET);
