@@ -2,6 +2,8 @@
   "block.electron.crusher": "粉砕機",
   "block.electron.builder": "自動建築機",
 
+  "block.electron.silver_ore": "銀鉱石",
+  "block.electron.deepslate_silver_ore": "深層銀鉱石",
   "block.electron.silver_block": "銀のブロック",
   "block.electron.raw_silver_block": "銀の原石ブロック",
 

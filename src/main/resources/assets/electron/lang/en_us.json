@@ -2,6 +2,8 @@
   "block.electron.crusher": "Crusher",
   "block.electron.builder": "Builder",
 
+  "block.electron.silver_ore": "Silver Ore",
+  "block.electron.deepslate_silver_ore": "Deepslate Silver Ore",
   "block.electron.silver_block": "Silver Block",
   "block.electron.raw_silver_block": "Raw Silver Block",
 
