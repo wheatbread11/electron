@@ -1,4 +1,4 @@
-package net.wheatbread11.electron.content.world.level.item;
+package net.wheatbread11.electron.content.world.item;
 
 import net.minecraft.world.item.ToolMaterial;
 import net.wheatbread11.electron.tags.ModBlockTags;
