@@ -23,12 +23,12 @@ public class ModPlacedFeatures {
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         var configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
-        var oreGold = configuredFeatures.getOrThrow(ModConfiguredFeatures.ORE_SILVER);
-        var oreGoldBuried = configuredFeatures.getOrThrow(ModConfiguredFeatures.ORE_SILVER_BURIED);
+        var oreSilver = configuredFeatures.getOrThrow(ModConfiguredFeatures.ORE_SILVER);
+        var oreSilverBuried = configuredFeatures.getOrThrow(ModConfiguredFeatures.ORE_SILVER_BURIED);
 
-        register(context, ORE_SILVER_EXTRA, oreGold, commonOrePlacement(50, HeightRangePlacement.uniform(VerticalAnchor.absolute(32), VerticalAnchor.absolute(256))));
-        register(context, ORE_SILVER, oreGoldBuried, commonOrePlacement(4, HeightRangePlacement.triangle(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(32))));
-        register(context, ORE_SILVER_LOWER, oreGoldBuried, orePlacement(CountPlacement.of(UniformInt.of(0, 1)), HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(-48))));
+        register(context, ORE_SILVER_EXTRA, oreSilver, commonOrePlacement(50, HeightRangePlacement.uniform(VerticalAnchor.absolute(32), VerticalAnchor.absolute(256))));
+        register(context, ORE_SILVER, oreSilverBuried, commonOrePlacement(4, HeightRangePlacement.triangle(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(32))));
+        register(context, ORE_SILVER_LOWER, oreSilverBuried, orePlacement(CountPlacement.of(UniformInt.of(0, 1)), HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(-48))));
     }
 
     private static ResourceKey<PlacedFeature> registerKey(String name) {
