@@ -46,6 +46,18 @@ public class ModItems {
                     "silver_hoe",
                     p -> new HoeItem(ModToolMaterial.SILVER, 0.0F, -3.0F, p)
             );
+    public static final DeferredItem<Item> SILVER_SPEAR =
+            ITEMS.registerItem(
+                    "silver_spear",
+                    Item::new,
+                    () -> new Item.Properties().spear(
+                            ModToolMaterial.SILVER,
+                            0.95F, 0.7F, 0.7F,
+                            3.5F, 13.0F,
+                            8.5F, 5.1F,
+                            13.75F, 4.6F
+                    )
+            );
 
     public static final DeferredItem<BlockItem> CRUSHER =
             ITEMS.registerSimpleBlockItem("crusher", ModBlocks.CRUSHER);

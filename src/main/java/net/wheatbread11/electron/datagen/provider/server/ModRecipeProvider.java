@@ -148,6 +148,18 @@ public class ModRecipeProvider extends RecipeProvider {
                 .define('X', ModItemTags.SILVER_TOOL_MATERIALS)
                 .unlockedBy("has_silver_ingot", this.has(ModItemTags.SILVER_TOOL_MATERIALS))
                 .save(this.output);
+        ShapedRecipeBuilder.shaped(
+                        this.registries.lookupOrThrow(Registries.ITEM),
+                        RecipeCategory.TOOLS,
+                        ModItems.SILVER_SPEAR
+                )
+                .pattern("  X")
+                .pattern(" # ")
+                .pattern("#  ")
+                .define('#', Items.STICK)
+                .define('X', ModItemTags.SILVER_TOOL_MATERIALS)
+                .unlockedBy("has_silver_ingot", this.has(ModItemTags.SILVER_TOOL_MATERIALS))
+                .save(this.output);
 
         buildSmeltingAndBlastingRecipe(
                 ModItems.SILVER_ORE,

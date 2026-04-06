@@ -27,6 +27,7 @@ public class BuildCreativeModTabContentsEventHandler {
         }
         if (event.getTabKey() == CreativeModeTabs.COMBAT) {
             event.accept(ModItems.SILVER_SWORD);
+            event.accept(ModItems.SILVER_SPEAR);
             event.accept(ModItems.SILVER_AXE);
         }
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
