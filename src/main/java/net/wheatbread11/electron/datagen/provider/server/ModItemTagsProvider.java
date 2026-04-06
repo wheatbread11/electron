@@ -4,6 +4,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.Identifier;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.common.data.ItemTagsProvider;
 import net.wheatbread11.electron.Electron;
 import net.wheatbread11.electron.registry.ModItems;
@@ -46,9 +47,24 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         this.tag(ItemTags.create(Identifier.fromNamespaceAndPath("electron", "silver_tool_materials")))
                 .addTag(ItemTags.create(Identifier.fromNamespaceAndPath("c", "ingots/silver")))
                 .replace(false);
+        this.tag(ItemTags.create(Identifier.fromNamespaceAndPath("electron", "repairs_silver_armor")))
+                .addTag(ItemTags.create(Identifier.fromNamespaceAndPath("c", "ingots/silver")))
+                .replace(false);
 
         this.tag(ItemTags.create(Identifier.fromNamespaceAndPath("minecraft", "swords")))
                 .add(ModItems.SILVER_SWORD.get())
+                .replace(false);
+        this.tag(ItemTags.create(Identifier.fromNamespaceAndPath("minecraft", "foot_armor")))
+                .add(ModItems.SILVER_BOOTS.get())
+                .replace(false);
+        this.tag(ItemTags.create(Identifier.fromNamespaceAndPath("minecraft", "leg_armor")))
+                .add(ModItems.SILVER_LEGGINGS.get())
+                .replace(false);
+        this.tag(ItemTags.create(Identifier.fromNamespaceAndPath("minecraft", "chest_armor")))
+                .add(ModItems.SILVER_CHESTPLATE.get())
+                .replace(false);
+        this.tag(ItemTags.create(Identifier.fromNamespaceAndPath("minecraft", "head_armor")))
+                .add(ModItems.SILVER_HELMET.get())
                 .replace(false);
     }
 }

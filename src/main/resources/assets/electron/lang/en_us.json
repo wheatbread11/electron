@@ -21,5 +21,9 @@
   "item.electron.silver_pickaxe": "Silver Pickaxe",
   "item.electron.silver_axe": "Silver Axe",
   "item.electron.silver_hoe": "Silver Hoe",
-  "item.electron.silver_spear": "Silver Spear"
+  "item.electron.silver_spear": "Silver Spear",
+  "item.electron.silver_helmet": "Silver Helmet",
+  "item.electron.silver_chestplate": "Silver Chestplate",
+  "item.electron.silver_leggings": "Silver Leggings",
+  "item.electron.silver_boots": "Silver Boots"
 }

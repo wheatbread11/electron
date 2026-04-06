@@ -13,6 +13,7 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.wheatbread11.electron.Electron;
+import net.wheatbread11.electron.content.world.item.ModEquipmentAssets;
 import net.wheatbread11.electron.registry.ModBlocks;
 import net.wheatbread11.electron.registry.ModItems;
 import org.jspecify.annotations.NonNull;
@@ -97,5 +98,9 @@ public class ModModelProvider extends ModelProvider {
         itemModels.generateFlatItem(ModItems.SILVER_AXE.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModels.generateFlatItem(ModItems.SILVER_HOE.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModels.generateSpear(ModItems.SILVER_SPEAR.get());
+        itemModels.generateTrimmableItem(ModItems.SILVER_HELMET.get(), ModEquipmentAssets.SILVER, Identifier.parse("minecraft:trims/items/helmet_trim"), false);
+        itemModels.generateTrimmableItem(ModItems.SILVER_CHESTPLATE.get(), ModEquipmentAssets.SILVER, Identifier.parse("minecraft:trims/items/chestplate_trim"), false);
+        itemModels.generateTrimmableItem(ModItems.SILVER_LEGGINGS.get(), ModEquipmentAssets.SILVER,  Identifier.parse("minecraft:trims/items/leggings_trim"), false);
+        itemModels.generateTrimmableItem(ModItems.SILVER_BOOTS.get(), ModEquipmentAssets.SILVER,  Identifier.parse("minecraft:trims/items/boots_trim"), false);
     }
 }

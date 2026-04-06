@@ -1,0 +1,19 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "electron:silver"
+      }
+    ],
+    "humanoid_baby": [
+      {
+        "texture": "electron:silver"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "electron:silver"
+      }
+    ]
+  }
+}

@@ -6,6 +6,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 import net.wheatbread11.electron.Electron;
+import net.wheatbread11.electron.datagen.provider.client.ModEquipmentAssetProvider;
 import net.wheatbread11.electron.datagen.provider.client.ModModelProvider;
 import net.wheatbread11.electron.datagen.provider.server.ModBlockLootTableSubProvider;
 import net.wheatbread11.electron.datagen.provider.server.ModBlockTagsProvider;
@@ -21,6 +22,7 @@ public class GatherDataEventHandler {
     @SubscribeEvent
     public static void gatherDataClient(GatherDataEvent.Client event) {
         event.createProvider(ModModelProvider::new);
+        event.createProvider(ModEquipmentAssetProvider::new);
     }
 
     @SubscribeEvent

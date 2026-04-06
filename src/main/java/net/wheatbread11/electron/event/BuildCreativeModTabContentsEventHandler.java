@@ -29,6 +29,10 @@ public class BuildCreativeModTabContentsEventHandler {
             event.accept(ModItems.SILVER_SWORD);
             event.accept(ModItems.SILVER_SPEAR);
             event.accept(ModItems.SILVER_AXE);
+            event.accept(ModItems.SILVER_HELMET);
+            event.accept(ModItems.SILVER_CHESTPLATE);
+            event.accept(ModItems.SILVER_LEGGINGS);
+            event.accept(ModItems.SILVER_BOOTS);
         }
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
             event.accept(ModItems.SILVER_SHOVEL);

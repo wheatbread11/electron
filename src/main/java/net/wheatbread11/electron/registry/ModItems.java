@@ -1,10 +1,12 @@
 package net.wheatbread11.electron.registry;
 
 import net.minecraft.world.item.*;
+import net.minecraft.world.item.equipment.ArmorType;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.wheatbread11.electron.Electron;
-import net.wheatbread11.electron.content.world.level.item.ModToolMaterial;
+import net.wheatbread11.electron.content.world.item.ModArmorMaterials;
+import net.wheatbread11.electron.content.world.item.ModToolMaterial;
 
 public class ModItems {
 
@@ -56,6 +58,42 @@ public class ModItems {
                             3.5F, 13.0F,
                             8.5F, 5.1F,
                             13.75F, 4.6F
+                    )
+            );
+    public static final DeferredItem<Item> SILVER_HELMET =
+            ITEMS.registerItem(
+                    "silver_helmet",
+                    Item::new,
+                    () -> new Item.Properties().humanoidArmor(
+                            ModArmorMaterials.SILVER,
+                            ArmorType.HELMET
+                    )
+            );
+    public static final DeferredItem<Item> SILVER_CHESTPLATE =
+            ITEMS.registerItem(
+                    "silver_chestplate",
+                    Item::new,
+                    () -> new Item.Properties().humanoidArmor(
+                            ModArmorMaterials.SILVER,
+                            ArmorType.CHESTPLATE
+                    )
+            );
+    public static final DeferredItem<Item> SILVER_LEGGINGS =
+            ITEMS.registerItem(
+                    "silver_leggings",
+                    Item::new,
+                    () -> new Item.Properties().humanoidArmor(
+                            ModArmorMaterials.SILVER,
+                            ArmorType.LEGGINGS
+                    )
+            );
+    public static final DeferredItem<Item> SILVER_BOOTS =
+            ITEMS.registerItem(
+                    "silver_boots",
+                    Item::new,
+                    () -> new Item.Properties().humanoidArmor(
+                            ModArmorMaterials.SILVER,
+                            ArmorType.BOOTS
                     )
             );
 
