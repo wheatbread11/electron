@@ -4,7 +4,6 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.Identifier;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.common.data.ItemTagsProvider;
 import net.wheatbread11.electron.Electron;
 import net.wheatbread11.electron.registry.ModItems;

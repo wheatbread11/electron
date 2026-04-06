@@ -8,7 +8,6 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.equipment.EquipmentAsset;
 import net.wheatbread11.electron.content.world.item.ModEquipmentAssets;
 
-import java.util.Optional;
 import java.util.function.BiConsumer;
 
 public class ModEquipmentAssetProvider extends EquipmentAssetProvider {
