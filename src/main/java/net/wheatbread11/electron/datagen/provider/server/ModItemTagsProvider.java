@@ -53,6 +53,9 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         this.tag(ItemTags.create(Identifier.fromNamespaceAndPath("minecraft", "swords")))
                 .add(ModItems.SILVER_SWORD.get())
                 .replace(false);
+        this.tag(ItemTags.create(Identifier.fromNamespaceAndPath("minecraft", "spears")))
+                .add(ModItems.SILVER_SPEAR.get())
+                .replace(false);
         this.tag(ItemTags.create(Identifier.fromNamespaceAndPath("minecraft", "foot_armor")))
                 .add(ModItems.SILVER_BOOTS.get())
                 .replace(false);
