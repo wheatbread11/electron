@@ -50,7 +50,8 @@ public class CrusherBlock extends Block {
 
     protected static boolean isCrushable(
             @NonNull ServerLevel level, @NonNull BlockState state, @NonNull BlockPos pos,
-            @NonNull ItemStack tool) {
+            @NonNull ItemStack tool
+    ) {
         if (state.isAir()) return false;
         if (state.getDestroySpeed(level, pos) == -1) return false;
         if (state.requiresCorrectToolForDrops()) {
