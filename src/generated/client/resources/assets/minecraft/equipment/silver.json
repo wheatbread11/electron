@@ -1,5 +1,10 @@
 {
   "layers": {
+    "horse_body": [
+      {
+        "texture": "electron:silver"
+      }
+    ],
     "humanoid": [
       {
         "texture": "electron:silver"
@@ -11,6 +16,11 @@
       }
     ],
     "humanoid_leggings": [
+      {
+        "texture": "electron:silver"
+      }
+    ],
+    "nautilus_body": [
       {
         "texture": "electron:silver"
       }

@@ -102,5 +102,7 @@ public class ModModelProvider extends ModelProvider {
         itemModels.generateTrimmableItem(ModItems.SILVER_CHESTPLATE.get(), ModEquipmentAssets.SILVER, Identifier.parse("minecraft:trims/items/chestplate_trim"), false);
         itemModels.generateTrimmableItem(ModItems.SILVER_LEGGINGS.get(), ModEquipmentAssets.SILVER,  Identifier.parse("minecraft:trims/items/leggings_trim"), false);
         itemModels.generateTrimmableItem(ModItems.SILVER_BOOTS.get(), ModEquipmentAssets.SILVER,  Identifier.parse("minecraft:trims/items/boots_trim"), false);
+        itemModels.generateFlatItem(ModItems.SILVER_HORSE_ARMOR.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.SILVER_NAUTILUS_ARMOR.get(), ModelTemplates.FLAT_ITEM);
     }
 }

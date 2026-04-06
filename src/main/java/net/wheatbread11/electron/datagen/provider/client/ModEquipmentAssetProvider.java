@@ -6,8 +6,10 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.equipment.EquipmentAsset;
+import net.wheatbread11.electron.Electron;
 import net.wheatbread11.electron.content.world.item.ModEquipmentAssets;
 
+import java.util.Optional;
 import java.util.function.BiConsumer;
 
 public class ModEquipmentAssetProvider extends EquipmentAssetProvider {
@@ -22,7 +24,23 @@ public class ModEquipmentAssetProvider extends EquipmentAssetProvider {
                 ModEquipmentAssets.SILVER,
                 EquipmentClientInfo.builder()
                         .addHumanoidLayers(
-                                Identifier.fromNamespaceAndPath("electron", "silver")
+                                Identifier.fromNamespaceAndPath(Electron.MOD_ID, "silver")
+                        )
+                        .addLayers(
+                                EquipmentClientInfo.LayerType.HORSE_BODY,
+                                new EquipmentClientInfo.Layer(
+                                        Identifier.fromNamespaceAndPath(Electron.MOD_ID, "silver"),
+                                        Optional.empty(),
+                                        false
+                                )
+                        )
+                        .addLayers(
+                                EquipmentClientInfo.LayerType.NAUTILUS_BODY,
+                                new EquipmentClientInfo.Layer(
+                                        Identifier.fromNamespaceAndPath(Electron.MOD_ID, "silver"),
+                                        Optional.empty(),
+                                        false
+                                )
                         )
                         .build()
         );

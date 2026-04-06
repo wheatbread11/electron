@@ -33,6 +33,8 @@ public class BuildCreativeModTabContentsEventHandler {
             event.accept(ModItems.SILVER_CHESTPLATE);
             event.accept(ModItems.SILVER_LEGGINGS);
             event.accept(ModItems.SILVER_BOOTS);
+            event.accept(ModItems.SILVER_HORSE_ARMOR);
+            event.accept(ModItems.SILVER_NAUTILUS_ARMOR);
         }
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
             event.accept(ModItems.SILVER_SHOVEL);

@@ -16,6 +16,7 @@ import net.wheatbread11.electron.registry.ModItems;
 import net.wheatbread11.electron.tags.ModItemTags;
 import org.jspecify.annotations.NonNull;
 
+import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class ModRecipeProvider extends RecipeProvider {
@@ -259,6 +260,82 @@ public class ModRecipeProvider extends RecipeProvider {
                 0.2F,
                 200
         );
+        List<ItemLike> silverEquipments = List.of(
+                ModItems.SILVER_SWORD,
+                ModItems.SILVER_SHOVEL,
+                ModItems.SILVER_PICKAXE,
+                ModItems.SILVER_AXE,
+                ModItems.SILVER_HOE,
+                ModItems.SILVER_SPEAR,
+                ModItems.SILVER_HELMET,
+                ModItems.SILVER_CHESTPLATE,
+                ModItems.SILVER_LEGGINGS,
+                ModItems.SILVER_BOOTS,
+                ModItems.SILVER_HORSE_ARMOR,
+                ModItems.SILVER_NAUTILUS_ARMOR
+        );
+        SimpleCookingRecipeBuilder.smelting(
+                        Ingredient.of(silverEquipments.stream()),
+                        RecipeCategory.MISC,
+                        CookingBookCategory.MISC,
+                        ModItems.SILVER_NUGGET,
+                        0.1F,
+                        200
+                )
+                .unlockedBy("has_" + BuiltInRegistries.ITEM.getKey(ModItems.SILVER_SWORD.asItem()), this.has(ModItems.SILVER_SWORD))
+                .unlockedBy("has_" + BuiltInRegistries.ITEM.getKey(ModItems.SILVER_SHOVEL.asItem()), this.has(ModItems.SILVER_SHOVEL))
+                .unlockedBy("has_" + BuiltInRegistries.ITEM.getKey(ModItems.SILVER_PICKAXE.asItem()), this.has(ModItems.SILVER_PICKAXE))
+                .unlockedBy("has_" + BuiltInRegistries.ITEM.getKey(ModItems.SILVER_AXE.asItem()), this.has(ModItems.SILVER_AXE))
+                .unlockedBy("has_" + BuiltInRegistries.ITEM.getKey(ModItems.SILVER_HOE.asItem()), this.has(ModItems.SILVER_HOE))
+                .unlockedBy("has_" + BuiltInRegistries.ITEM.getKey(ModItems.SILVER_SPEAR.asItem()), this.has(ModItems.SILVER_SPEAR))
+                .unlockedBy("has_" + BuiltInRegistries.ITEM.getKey(ModItems.SILVER_HELMET.asItem()), this.has(ModItems.SILVER_HELMET))
+                .unlockedBy("has_" + BuiltInRegistries.ITEM.getKey(ModItems.SILVER_CHESTPLATE.asItem()), this.has(ModItems.SILVER_CHESTPLATE))
+                .unlockedBy("has_" + BuiltInRegistries.ITEM.getKey(ModItems.SILVER_LEGGINGS.asItem()), this.has(ModItems.SILVER_LEGGINGS))
+                .unlockedBy("has_" + BuiltInRegistries.ITEM.getKey(ModItems.SILVER_BOOTS.asItem()), this.has(ModItems.SILVER_BOOTS))
+                .unlockedBy("has_" + BuiltInRegistries.ITEM.getKey(ModItems.SILVER_HORSE_ARMOR.asItem()), this.has(ModItems.SILVER_HORSE_ARMOR))
+                .unlockedBy("has_" + BuiltInRegistries.ITEM.getKey(ModItems.SILVER_NAUTILUS_ARMOR.asItem()), this.has(ModItems.SILVER_NAUTILUS_ARMOR))
+                .save(
+                        this.output,
+                        ResourceKey.create(
+                                Registries.RECIPE,
+                                Identifier.fromNamespaceAndPath(
+                                        Electron.MOD_ID,
+                                        BuiltInRegistries.ITEM.getKey(ModItems.SILVER_NUGGET.asItem()).getPath()
+                                                + "_from_smelting"
+                                )
+                        )
+                );
+        SimpleCookingRecipeBuilder.blasting(
+                        Ingredient.of(silverEquipments.stream()),
+                        RecipeCategory.MISC,
+                        CookingBookCategory.MISC,
+                        ModItems.SILVER_NUGGET,
+                        0.1F,
+                        100
+                )
+                .unlockedBy("has_" + BuiltInRegistries.ITEM.getKey(ModItems.SILVER_SWORD.asItem()), this.has(ModItems.SILVER_SWORD))
+                .unlockedBy("has_" + BuiltInRegistries.ITEM.getKey(ModItems.SILVER_SHOVEL.asItem()), this.has(ModItems.SILVER_SHOVEL))
+                .unlockedBy("has_" + BuiltInRegistries.ITEM.getKey(ModItems.SILVER_PICKAXE.asItem()), this.has(ModItems.SILVER_PICKAXE))
+                .unlockedBy("has_" + BuiltInRegistries.ITEM.getKey(ModItems.SILVER_AXE.asItem()), this.has(ModItems.SILVER_AXE))
+                .unlockedBy("has_" + BuiltInRegistries.ITEM.getKey(ModItems.SILVER_HOE.asItem()), this.has(ModItems.SILVER_HOE))
+                .unlockedBy("has_" + BuiltInRegistries.ITEM.getKey(ModItems.SILVER_SPEAR.asItem()), this.has(ModItems.SILVER_SPEAR))
+                .unlockedBy("has_" + BuiltInRegistries.ITEM.getKey(ModItems.SILVER_HELMET.asItem()), this.has(ModItems.SILVER_HELMET))
+                .unlockedBy("has_" + BuiltInRegistries.ITEM.getKey(ModItems.SILVER_CHESTPLATE.asItem()), this.has(ModItems.SILVER_CHESTPLATE))
+                .unlockedBy("has_" + BuiltInRegistries.ITEM.getKey(ModItems.SILVER_LEGGINGS.asItem()), this.has(ModItems.SILVER_LEGGINGS))
+                .unlockedBy("has_" + BuiltInRegistries.ITEM.getKey(ModItems.SILVER_BOOTS.asItem()), this.has(ModItems.SILVER_BOOTS))
+                .unlockedBy("has_" + BuiltInRegistries.ITEM.getKey(ModItems.SILVER_HORSE_ARMOR.asItem()), this.has(ModItems.SILVER_HORSE_ARMOR))
+                .unlockedBy("has_" + BuiltInRegistries.ITEM.getKey(ModItems.SILVER_NAUTILUS_ARMOR.asItem()), this.has(ModItems.SILVER_NAUTILUS_ARMOR))
+                .save(
+                        this.output,
+                        ResourceKey.create(
+                                Registries.RECIPE,
+                                Identifier.fromNamespaceAndPath(
+                                        Electron.MOD_ID,
+                                        BuiltInRegistries.ITEM.getKey(ModItems.SILVER_NUGGET.asItem()).getPath()
+                                                + "_from_blasting"
+                                )
+                        )
+                );
     }
 
     protected void buildCompactingCraftRecipe(

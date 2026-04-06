@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "ingredient": [
+    "electron:silver_sword",
+    "electron:silver_shovel",
+    "electron:silver_pickaxe",
+    "electron:silver_axe",
+    "electron:silver_hoe",
+    "electron:silver_spear",
+    "electron:silver_helmet",
+    "electron:silver_chestplate",
+    "electron:silver_leggings",
+    "electron:silver_boots",
+    "electron:silver_horse_armor",
+    "electron:silver_nautilus_armor"
+  ],
+  "result": {
+    "id": "electron:silver_nugget"
+  }
+}

@@ -96,6 +96,18 @@ public class ModItems {
                             ArmorType.BOOTS
                     )
             );
+    public static final DeferredItem<Item> SILVER_HORSE_ARMOR =
+            ITEMS.registerItem(
+                    "silver_horse_armor",
+                    Item::new,
+                    () -> new Item.Properties().horseArmor(ModArmorMaterials.SILVER)
+            );
+    public static final DeferredItem<Item> SILVER_NAUTILUS_ARMOR =
+            ITEMS.registerItem(
+                    "silver_nautilus_armor",
+                    Item::new,
+                    () -> new Item.Properties().nautilusArmor(ModArmorMaterials.SILVER)
+            );
 
     public static final DeferredItem<BlockItem> CRUSHER =
             ITEMS.registerSimpleBlockItem("crusher", ModBlocks.CRUSHER);

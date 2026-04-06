@@ -1,0 +1,153 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_electron:silver_axe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "electron:silver_axe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_electron:silver_boots": {
+      "conditions": {
+        "items": [
+          {
+            "items": "electron:silver_boots"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_electron:silver_chestplate": {
+      "conditions": {
+        "items": [
+          {
+            "items": "electron:silver_chestplate"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_electron:silver_helmet": {
+      "conditions": {
+        "items": [
+          {
+            "items": "electron:silver_helmet"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_electron:silver_hoe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "electron:silver_hoe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_electron:silver_horse_armor": {
+      "conditions": {
+        "items": [
+          {
+            "items": "electron:silver_horse_armor"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_electron:silver_leggings": {
+      "conditions": {
+        "items": [
+          {
+            "items": "electron:silver_leggings"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_electron:silver_nautilus_armor": {
+      "conditions": {
+        "items": [
+          {
+            "items": "electron:silver_nautilus_armor"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_electron:silver_pickaxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "electron:silver_pickaxe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_electron:silver_shovel": {
+      "conditions": {
+        "items": [
+          {
+            "items": "electron:silver_shovel"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_electron:silver_spear": {
+      "conditions": {
+        "items": [
+          {
+            "items": "electron:silver_spear"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_electron:silver_sword": {
+      "conditions": {
+        "items": [
+          {
+            "items": "electron:silver_sword"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "electron:silver_nugget_from_blasting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_electron:silver_sword",
+      "has_electron:silver_shovel",
+      "has_electron:silver_pickaxe",
+      "has_electron:silver_axe",
+      "has_electron:silver_hoe",
+      "has_electron:silver_spear",
+      "has_electron:silver_helmet",
+      "has_electron:silver_chestplate",
+      "has_electron:silver_leggings",
+      "has_electron:silver_boots",
+      "has_electron:silver_horse_armor",
+      "has_electron:silver_nautilus_armor"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "electron:silver_nugget_from_blasting"
+    ]
+  }
+}
