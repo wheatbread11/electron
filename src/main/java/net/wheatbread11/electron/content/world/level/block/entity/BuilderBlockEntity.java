@@ -56,7 +56,7 @@ public class BuilderBlockEntity extends RandomizableContainerBlockEntity {
     @Override
     @NonNull
     public Component getDefaultName() {
-        return Component.translatable("block.electron.builder");
+        return DEFAULT_NAME;
     }
 
     @Override
