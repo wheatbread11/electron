@@ -5,8 +5,8 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.wheatbread11.electron.Electron;
-import net.wheatbread11.electron.registry.ModBlocks;
-import net.wheatbread11.electron.registry.ModItems;
+import net.wheatbread11.electron.content.world.item.ModBlocks;
+import net.wheatbread11.electron.content.world.item.ModItems;
 
 @EventBusSubscriber(modid = Electron.MOD_ID)
 public class BuildCreativeModTabContentsEventHandler {

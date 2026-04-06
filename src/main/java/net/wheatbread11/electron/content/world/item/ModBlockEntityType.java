@@ -1,4 +1,4 @@
-package net.wheatbread11.electron.registry;
+package net.wheatbread11.electron.content.world.item;
 
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.block.entity.BlockEntityType;

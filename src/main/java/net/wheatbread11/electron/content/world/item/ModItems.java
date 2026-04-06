@@ -1,12 +1,10 @@
-package net.wheatbread11.electron.registry;
+package net.wheatbread11.electron.content.world.item;
 
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.equipment.ArmorType;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.wheatbread11.electron.Electron;
-import net.wheatbread11.electron.content.world.item.ModArmorMaterials;
-import net.wheatbread11.electron.content.world.item.ModToolMaterial;
 
 public class ModItems {
 

@@ -1,11 +1,11 @@
-package net.wheatbread11.electron.datagen.provider.server;
+package net.wheatbread11.electron.content.data.loot;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.level.block.Block;
-import net.wheatbread11.electron.registry.ModBlocks;
-import net.wheatbread11.electron.registry.ModItems;
+import net.wheatbread11.electron.content.world.item.ModBlocks;
+import net.wheatbread11.electron.content.world.item.ModItems;
 import org.jspecify.annotations.NonNull;
 
 import java.util.Set;

@@ -6,9 +6,13 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 import net.wheatbread11.electron.Electron;
-import net.wheatbread11.electron.datagen.provider.client.ModEquipmentAssetProvider;
-import net.wheatbread11.electron.datagen.provider.client.ModModelProvider;
-import net.wheatbread11.electron.datagen.provider.server.*;
+import net.wheatbread11.electron.common.data.ModBlockTagsProvider;
+import net.wheatbread11.electron.common.data.ModDatapackProvider;
+import net.wheatbread11.electron.common.data.ModItemTagsProvider;
+import net.wheatbread11.electron.content.client.data.models.ModEquipmentAssetProvider;
+import net.wheatbread11.electron.content.client.data.models.ModModelProvider;
+import net.wheatbread11.electron.content.data.loot.ModBlockLootTableSubProvider;
+import net.wheatbread11.electron.content.data.recipes.ModRecipeProvider;
 
 import java.util.List;
 import java.util.Set;

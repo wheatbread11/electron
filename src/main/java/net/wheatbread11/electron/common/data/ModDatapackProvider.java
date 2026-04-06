@@ -1,4 +1,4 @@
-package net.wheatbread11.electron.datagen.provider.server;
+package net.wheatbread11.electron.common.data;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.RegistrySetBuilder;

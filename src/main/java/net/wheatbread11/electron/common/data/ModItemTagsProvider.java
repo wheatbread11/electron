@@ -1,4 +1,4 @@
-package net.wheatbread11.electron.datagen.provider.server;
+package net.wheatbread11.electron.common.data;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -6,7 +6,7 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.tags.ItemTags;
 import net.neoforged.neoforge.common.data.ItemTagsProvider;
 import net.wheatbread11.electron.Electron;
-import net.wheatbread11.electron.registry.ModItems;
+import net.wheatbread11.electron.content.world.item.ModItems;
 import org.jspecify.annotations.NonNull;
 
 import java.util.concurrent.CompletableFuture;

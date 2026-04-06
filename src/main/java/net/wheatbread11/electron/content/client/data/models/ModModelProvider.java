@@ -1,4 +1,4 @@
-package net.wheatbread11.electron.datagen.provider.client;
+package net.wheatbread11.electron.content.client.data.models;
 
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
@@ -14,8 +14,8 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.wheatbread11.electron.Electron;
 import net.wheatbread11.electron.content.world.item.ModEquipmentAssets;
-import net.wheatbread11.electron.registry.ModBlocks;
-import net.wheatbread11.electron.registry.ModItems;
+import net.wheatbread11.electron.content.world.item.ModBlocks;
+import net.wheatbread11.electron.content.world.item.ModItems;
 import org.jspecify.annotations.NonNull;
 
 public class ModModelProvider extends ModelProvider {

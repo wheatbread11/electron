@@ -2,9 +2,9 @@ package net.wheatbread11.electron;
 
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
-import net.wheatbread11.electron.registry.ModBlockEntityType;
-import net.wheatbread11.electron.registry.ModBlocks;
-import net.wheatbread11.electron.registry.ModItems;
+import net.wheatbread11.electron.content.world.item.ModBlockEntityType;
+import net.wheatbread11.electron.content.world.item.ModBlocks;
+import net.wheatbread11.electron.content.world.item.ModItems;
 
 @Mod(Electron.MOD_ID)
 public class Electron {

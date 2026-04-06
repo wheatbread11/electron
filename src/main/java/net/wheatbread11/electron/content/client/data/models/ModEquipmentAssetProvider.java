@@ -1,4 +1,4 @@
-package net.wheatbread11.electron.datagen.provider.client;
+package net.wheatbread11.electron.content.client.data.models;
 
 import net.minecraft.client.data.models.EquipmentAssetProvider;
 import net.minecraft.client.resources.model.EquipmentClientInfo;

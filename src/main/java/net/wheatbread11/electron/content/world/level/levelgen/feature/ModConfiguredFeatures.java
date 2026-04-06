@@ -12,7 +12,7 @@ import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguratio
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
 import net.wheatbread11.electron.Electron;
-import net.wheatbread11.electron.registry.ModBlocks;
+import net.wheatbread11.electron.content.world.item.ModBlocks;
 
 import java.util.List;
 
