@@ -8,10 +8,7 @@ import net.neoforged.neoforge.data.event.GatherDataEvent;
 import net.wheatbread11.electron.Electron;
 import net.wheatbread11.electron.datagen.provider.client.ModEquipmentAssetProvider;
 import net.wheatbread11.electron.datagen.provider.client.ModModelProvider;
-import net.wheatbread11.electron.datagen.provider.server.ModBlockLootTableSubProvider;
-import net.wheatbread11.electron.datagen.provider.server.ModBlockTagsProvider;
-import net.wheatbread11.electron.datagen.provider.server.ModItemTagsProvider;
-import net.wheatbread11.electron.datagen.provider.server.ModRecipeProvider;
+import net.wheatbread11.electron.datagen.provider.server.*;
 
 import java.util.List;
 import java.util.Set;
@@ -41,5 +38,6 @@ public class GatherDataEventHandler {
         ));
         event.createProvider(ModBlockTagsProvider::new);
         event.createProvider(ModItemTagsProvider::new);
+        event.createProvider(ModDatapackProvider::new);
     }
 }
