@@ -1,4 +1,4 @@
-package net.wheatbread11.electron.tags;
+package net.wheatbread11.electron.content.tags;
 
 import net.minecraft.resources.Identifier;
 import net.minecraft.tags.BlockTags;

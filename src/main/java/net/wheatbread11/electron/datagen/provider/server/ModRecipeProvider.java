@@ -13,7 +13,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 import net.wheatbread11.electron.Electron;
 import net.wheatbread11.electron.registry.ModItems;
-import net.wheatbread11.electron.tags.ModItemTags;
+import net.wheatbread11.electron.content.tags.ModItemTags;
 import org.jspecify.annotations.NonNull;
 
 import java.util.List;

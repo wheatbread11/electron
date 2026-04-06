@@ -4,7 +4,7 @@ import com.google.common.collect.Maps;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.equipment.ArmorMaterial;
 import net.minecraft.world.item.equipment.ArmorType;
-import net.wheatbread11.electron.tags.ModItemTags;
+import net.wheatbread11.electron.content.tags.ModItemTags;
 
 import java.util.Map;
 

@@ -1,8 +1,8 @@
 package net.wheatbread11.electron.content.world.item;
 
 import net.minecraft.world.item.ToolMaterial;
-import net.wheatbread11.electron.tags.ModBlockTags;
-import net.wheatbread11.electron.tags.ModItemTags;
+import net.wheatbread11.electron.content.tags.ModBlockTags;
+import net.wheatbread11.electron.content.tags.ModItemTags;
 
 public class ModToolMaterial {
 
