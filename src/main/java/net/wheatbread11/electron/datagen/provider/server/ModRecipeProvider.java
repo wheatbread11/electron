@@ -160,6 +160,48 @@ public class ModRecipeProvider extends RecipeProvider {
                 .define('X', ModItemTags.SILVER_TOOL_MATERIALS)
                 .unlockedBy("has_silver_ingot", this.has(ModItemTags.SILVER_TOOL_MATERIALS))
                 .save(this.output);
+        ShapedRecipeBuilder.shaped(
+                        this.registries.lookupOrThrow(Registries.ITEM),
+                        RecipeCategory.COMBAT,
+                        ModItems.SILVER_HELMET
+                )
+                .pattern("XXX")
+                .pattern("X X")
+                .define('X', ModItemTags.SILVER_TOOL_MATERIALS)
+                .unlockedBy("has_silver_ingot", this.has(ModItemTags.SILVER_TOOL_MATERIALS))
+                .save(this.output);
+        ShapedRecipeBuilder.shaped(
+                        this.registries.lookupOrThrow(Registries.ITEM),
+                        RecipeCategory.COMBAT,
+                        ModItems.SILVER_CHESTPLATE
+                )
+                .pattern("X X")
+                .pattern("XXX")
+                .pattern("XXX")
+                .define('X', ModItemTags.SILVER_TOOL_MATERIALS)
+                .unlockedBy("has_silver_ingot", this.has(ModItemTags.SILVER_TOOL_MATERIALS))
+                .save(this.output);
+        ShapedRecipeBuilder.shaped(
+                        this.registries.lookupOrThrow(Registries.ITEM),
+                        RecipeCategory.COMBAT,
+                        ModItems.SILVER_LEGGINGS
+                )
+                .pattern("XXX")
+                .pattern("X X")
+                .pattern("X X")
+                .define('X', ModItemTags.SILVER_TOOL_MATERIALS)
+                .unlockedBy("has_silver_ingot", this.has(ModItemTags.SILVER_TOOL_MATERIALS))
+                .save(this.output);
+        ShapedRecipeBuilder.shaped(
+                        this.registries.lookupOrThrow(Registries.ITEM),
+                        RecipeCategory.COMBAT,
+                        ModItems.SILVER_BOOTS
+                )
+                .pattern("X X")
+                .pattern("X X")
+                .define('X', ModItemTags.SILVER_TOOL_MATERIALS)
+                .unlockedBy("has_silver_ingot", this.has(ModItemTags.SILVER_TOOL_MATERIALS))
+                .save(this.output);
 
         buildSmeltingAndBlastingRecipe(
                 ModItems.SILVER_ORE,
@@ -171,6 +213,14 @@ public class ModRecipeProvider extends RecipeProvider {
         );
         buildSmeltingAndBlastingRecipe(
                 ModItems.DEEPSLATE_SILVER_ORE,
+                RecipeCategory.MISC,
+                CookingBookCategory.MISC,
+                ModItems.SILVER_INGOT,
+                0.7F,
+                200
+        );
+        buildSmeltingAndBlastingRecipe(
+                ModItems.RAW_SILVER,
                 RecipeCategory.MISC,
                 CookingBookCategory.MISC,
                 ModItems.SILVER_INGOT,
@@ -207,15 +257,6 @@ public class ModRecipeProvider extends RecipeProvider {
                 CookingBookCategory.MISC,
                 ModItems.SILVER_INGOT,
                 0.2F,
-                200
-        );
-
-        buildSmeltingAndBlastingRecipe(
-                ModItems.RAW_SILVER,
-                RecipeCategory.MISC,
-                CookingBookCategory.MISC,
-                ModItems.SILVER_INGOT,
-                0.7F,
                 200
         );
     }
