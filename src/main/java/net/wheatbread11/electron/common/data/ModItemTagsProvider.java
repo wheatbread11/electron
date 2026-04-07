@@ -60,6 +60,7 @@ public class ModItemTagsProvider extends ItemTagsProvider {
                 .replace(false);
         this.tag(ModItemTags.EQUIPMENT_AVOID_UNDEAD)
                 .addTag(ModItemTags.WEAPON_IMMUNE_TO_UNDEAD)
+                .add(ModItems.SILVER_HELMET.get())
                 .add(ModItems.SILVER_CHESTPLATE.get())
                 .add(ModItems.SILVER_LEGGINGS.get())
                 .add(ModItems.SILVER_BOOTS.get())
