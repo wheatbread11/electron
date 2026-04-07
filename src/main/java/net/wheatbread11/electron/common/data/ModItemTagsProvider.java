@@ -6,6 +6,7 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.tags.ItemTags;
 import net.neoforged.neoforge.common.data.ItemTagsProvider;
 import net.wheatbread11.electron.Electron;
+import net.wheatbread11.electron.content.tags.ModItemTags;
 import net.wheatbread11.electron.content.world.item.ModItems;
 import org.jspecify.annotations.NonNull;
 
@@ -43,10 +44,10 @@ public class ModItemTagsProvider extends ItemTagsProvider {
                 .add(ModItems.RAW_SILVER.get())
                 .replace(false);
 
-        this.tag(ItemTags.create(Identifier.fromNamespaceAndPath("electron", "silver_tool_materials")))
+        this.tag(ModItemTags.SILVER_TOOL_MATERIALS)
                 .addTag(ItemTags.create(Identifier.fromNamespaceAndPath("c", "ingots/silver")))
                 .replace(false);
-        this.tag(ItemTags.create(Identifier.fromNamespaceAndPath("electron", "repairs_silver_armor")))
+        this.tag(ModItemTags.REPAIRS_SILVER_ARMOR)
                 .addTag(ItemTags.create(Identifier.fromNamespaceAndPath("c", "ingots/silver")))
                 .replace(false);
 
