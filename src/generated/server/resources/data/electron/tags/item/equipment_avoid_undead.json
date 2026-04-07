@@ -1,12 +1,6 @@
 {
   "values": [
-    "electron:silver_sword",
-    "electron:silver_shovel",
-    "electron:silver_pickaxe",
-    "electron:silver_axe",
-    "electron:silver_hoe",
-    "electron:silver_spear",
-    "electron:silver_helmet",
+    "#electron:weapon_immune_to_undead",
     "electron:silver_chestplate",
     "electron:silver_leggings",
     "electron:silver_boots",

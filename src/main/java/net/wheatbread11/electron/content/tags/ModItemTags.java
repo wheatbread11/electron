@@ -10,6 +10,7 @@ public class ModItemTags {
 
     public static final TagKey<Item> SILVER_TOOL_MATERIALS = createTag("silver_tool_materials");
     public static final TagKey<Item> REPAIRS_SILVER_ARMOR = createTag("repairs_silver_armor");
+    public static final TagKey<Item> WEAPON_IMMUNE_TO_UNDEAD = createTag("weapon_immune_to_undead");
     public static final TagKey<Item> EQUIPMENT_AVOID_UNDEAD = createTag("equipment_avoid_undead");
 
     private static TagKey<Item> createTag(String name) {
