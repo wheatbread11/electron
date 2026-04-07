@@ -50,6 +50,20 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         this.tag(ModItemTags.REPAIRS_SILVER_ARMOR)
                 .addTag(ItemTags.create(Identifier.fromNamespaceAndPath("c", "ingots/silver")))
                 .replace(false);
+        this.tag(ModItemTags.EQUIPMENT_AVOID_UNDEAD)
+                .add(ModItems.SILVER_SWORD.get())
+                .add(ModItems.SILVER_SHOVEL.get())
+                .add(ModItems.SILVER_PICKAXE.get())
+                .add(ModItems.SILVER_AXE.get())
+                .add(ModItems.SILVER_HOE.get())
+                .add(ModItems.SILVER_SPEAR.get())
+                .add(ModItems.SILVER_HELMET.get())
+                .add(ModItems.SILVER_CHESTPLATE.get())
+                .add(ModItems.SILVER_LEGGINGS.get())
+                .add(ModItems.SILVER_BOOTS.get())
+                .add(ModItems.SILVER_HORSE_ARMOR.get())
+                .add(ModItems.SILVER_NAUTILUS_ARMOR.get())
+                .replace(false);
 
         this.tag(ItemTags.create(Identifier.fromNamespaceAndPath("minecraft", "swords")))
                 .add(ModItems.SILVER_SWORD.get())
