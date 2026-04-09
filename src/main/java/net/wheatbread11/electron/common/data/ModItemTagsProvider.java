@@ -68,25 +68,37 @@ public class ModItemTagsProvider extends ItemTagsProvider {
                 .add(ModItems.SILVER_NAUTILUS_ARMOR.get())
                 .replace(false);
 
-        this.tag(ItemTags.create(Identifier.fromNamespaceAndPath("minecraft", "swords")))
+        this.tag(ItemTags.create(Identifier.withDefaultNamespace("swords")))
                 .add(ModItems.SILVER_SWORD.get())
                 .replace(false);
-        this.tag(ItemTags.create(Identifier.fromNamespaceAndPath("minecraft", "spears")))
+        this.tag(ItemTags.create(Identifier.withDefaultNamespace("shovels")))
+                .add(ModItems.SILVER_SHOVEL.get())
+                .replace(false);
+        this.tag(ItemTags.create(Identifier.withDefaultNamespace("pickaxes")))
+                .add(ModItems.SILVER_PICKAXE.get())
+                .replace(false);
+        this.tag(ItemTags.create(Identifier.withDefaultNamespace("axes")))
+                .add(ModItems.SILVER_AXE.get())
+                .replace(false);
+        this.tag(ItemTags.create(Identifier.withDefaultNamespace("hoes")))
+                .add(ModItems.SILVER_HOE.get())
+                .replace(false);
+        this.tag(ItemTags.create(Identifier.withDefaultNamespace("spears")))
                 .add(ModItems.SILVER_SPEAR.get())
                 .replace(false);
-        this.tag(ItemTags.create(Identifier.fromNamespaceAndPath("minecraft", "foot_armor")))
+        this.tag(ItemTags.create(Identifier.withDefaultNamespace("foot_armor")))
                 .add(ModItems.SILVER_BOOTS.get())
                 .replace(false);
-        this.tag(ItemTags.create(Identifier.fromNamespaceAndPath("minecraft", "leg_armor")))
+        this.tag(ItemTags.create(Identifier.withDefaultNamespace("leg_armor")))
                 .add(ModItems.SILVER_LEGGINGS.get())
                 .replace(false);
-        this.tag(ItemTags.create(Identifier.fromNamespaceAndPath("minecraft", "chest_armor")))
+        this.tag(ItemTags.create(Identifier.withDefaultNamespace("chest_armor")))
                 .add(ModItems.SILVER_CHESTPLATE.get())
                 .replace(false);
-        this.tag(ItemTags.create(Identifier.fromNamespaceAndPath("minecraft", "head_armor")))
+        this.tag(ItemTags.create(Identifier.withDefaultNamespace("head_armor")))
                 .add(ModItems.SILVER_HELMET.get())
                 .replace(false);
-        this.tag(ItemTags.create(Identifier.fromNamespaceAndPath("minecraft", "metal_nuggets")))
+        this.tag(ItemTags.create(Identifier.withDefaultNamespace("metal_nuggets")))
                 .add(ModItems.SILVER_NUGGET.get())
                 .replace(false);
     }
