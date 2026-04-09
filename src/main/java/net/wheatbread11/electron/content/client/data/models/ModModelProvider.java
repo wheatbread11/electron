@@ -13,8 +13,8 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.wheatbread11.electron.Electron;
-import net.wheatbread11.electron.content.world.item.ModEquipmentAssets;
-import net.wheatbread11.electron.content.world.item.ModBlocks;
+import net.wheatbread11.electron.content.world.item.equipment.ModEquipmentAssets;
+import net.wheatbread11.electron.content.world.level.block.ModBlocks;
 import net.wheatbread11.electron.content.world.item.ModItems;
 import org.jspecify.annotations.NonNull;
 

@@ -1,4 +1,4 @@
-package net.wheatbread11.electron.content.world.item;
+package net.wheatbread11.electron.content.world.item.equipment;
 
 import net.minecraft.core.Registry;
 import net.minecraft.resources.Identifier;

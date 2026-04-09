@@ -3,7 +3,7 @@ package net.wheatbread11.electron.content.core.crusher;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Blocks;
 import net.wheatbread11.electron.content.world.level.block.CrusherBlock;
-import net.wheatbread11.electron.content.world.item.ModBlocks;
+import net.wheatbread11.electron.content.world.level.block.ModBlocks;
 import net.wheatbread11.electron.content.world.item.ModItems;
 
 public class CrusherDropsRegisterDefault {

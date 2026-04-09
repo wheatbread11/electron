@@ -1,4 +1,4 @@
-package net.wheatbread11.electron.content.world.item;
+package net.wheatbread11.electron.content.world.level.block;
 
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.world.level.block.Block;
@@ -10,8 +10,6 @@ import net.minecraft.world.level.material.MapColor;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.wheatbread11.electron.Electron;
-import net.wheatbread11.electron.content.world.level.block.BuilderBlock;
-import net.wheatbread11.electron.content.world.level.block.CrusherBlock;
 
 public class ModBlocks {
 

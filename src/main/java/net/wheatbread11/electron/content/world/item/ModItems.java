@@ -5,6 +5,8 @@ import net.minecraft.world.item.equipment.ArmorType;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.wheatbread11.electron.Electron;
+import net.wheatbread11.electron.content.world.item.equipment.ModArmorMaterials;
+import net.wheatbread11.electron.content.world.level.block.ModBlocks;
 
 public class ModItems {
 

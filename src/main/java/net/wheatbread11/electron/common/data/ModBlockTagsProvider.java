@@ -6,7 +6,7 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.tags.BlockTags;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.wheatbread11.electron.Electron;
-import net.wheatbread11.electron.content.world.item.ModBlocks;
+import net.wheatbread11.electron.content.world.level.block.ModBlocks;
 import org.jspecify.annotations.NonNull;
 
 import java.util.concurrent.CompletableFuture;

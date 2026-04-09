@@ -1,4 +1,4 @@
-package net.wheatbread11.electron.content.world.item;
+package net.wheatbread11.electron.content.world.item.equipment;
 
 import com.google.common.collect.Maps;
 import net.minecraft.sounds.SoundEvents;

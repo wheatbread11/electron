@@ -7,7 +7,7 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.equipment.EquipmentAsset;
 import net.wheatbread11.electron.Electron;
-import net.wheatbread11.electron.content.world.item.ModEquipmentAssets;
+import net.wheatbread11.electron.content.world.item.equipment.ModEquipmentAssets;
 
 import java.util.Optional;
 import java.util.function.BiConsumer;

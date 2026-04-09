@@ -14,7 +14,7 @@ import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.storage.ValueInput;
 import net.minecraft.world.level.storage.ValueOutput;
-import net.wheatbread11.electron.content.world.item.ModBlockEntityType;
+import net.wheatbread11.electron.content.world.entity.ModBlockEntityType;
 import org.jspecify.annotations.NonNull;
 
 public class BuilderBlockEntity extends RandomizableContainerBlockEntity {

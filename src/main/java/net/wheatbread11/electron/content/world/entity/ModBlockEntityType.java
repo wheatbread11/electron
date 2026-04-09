@@ -1,9 +1,10 @@
-package net.wheatbread11.electron.content.world.item;
+package net.wheatbread11.electron.content.world.entity;
 
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.wheatbread11.electron.Electron;
+import net.wheatbread11.electron.content.world.level.block.ModBlocks;
 import net.wheatbread11.electron.content.world.level.block.entity.BuilderBlockEntity;
 
 import java.util.function.Supplier;

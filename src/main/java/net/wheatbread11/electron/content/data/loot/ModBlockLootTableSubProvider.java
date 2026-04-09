@@ -4,7 +4,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.level.block.Block;
-import net.wheatbread11.electron.content.world.item.ModBlocks;
+import net.wheatbread11.electron.content.world.level.block.ModBlocks;
 import net.wheatbread11.electron.content.world.item.ModItems;
 import org.jspecify.annotations.NonNull;
 
