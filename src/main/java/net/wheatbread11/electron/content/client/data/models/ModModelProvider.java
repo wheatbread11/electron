@@ -98,10 +98,10 @@ public class ModModelProvider extends ModelProvider {
         itemModels.generateFlatItem(ModItems.SILVER_AXE.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModels.generateFlatItem(ModItems.SILVER_HOE.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModels.generateSpear(ModItems.SILVER_SPEAR.get());
-        itemModels.generateTrimmableItem(ModItems.SILVER_HELMET.get(), ModEquipmentAssets.SILVER, Identifier.parse("minecraft:trims/items/helmet_trim"), false);
-        itemModels.generateTrimmableItem(ModItems.SILVER_CHESTPLATE.get(), ModEquipmentAssets.SILVER, Identifier.parse("minecraft:trims/items/chestplate_trim"), false);
-        itemModels.generateTrimmableItem(ModItems.SILVER_LEGGINGS.get(), ModEquipmentAssets.SILVER,  Identifier.parse("minecraft:trims/items/leggings_trim"), false);
-        itemModels.generateTrimmableItem(ModItems.SILVER_BOOTS.get(), ModEquipmentAssets.SILVER,  Identifier.parse("minecraft:trims/items/boots_trim"), false);
+        itemModels.generateDynamicTrimmableItem(ModItems.SILVER_HELMET.get(), itemModels.createFlatItemModel(ModItems.SILVER_HELMET.get(), ModelTemplates.FLAT_ITEM), ItemModelGenerators.TRIM_PREFIX_HELMET);
+        itemModels.generateDynamicTrimmableItem(ModItems.SILVER_CHESTPLATE.get(), itemModels.createFlatItemModel(ModItems.SILVER_CHESTPLATE.get(), ModelTemplates.FLAT_ITEM), ItemModelGenerators.TRIM_PREFIX_CHESTPLATE);
+        itemModels.generateDynamicTrimmableItem(ModItems.SILVER_LEGGINGS.get(), itemModels.createFlatItemModel(ModItems.SILVER_LEGGINGS.get(), ModelTemplates.FLAT_ITEM), ItemModelGenerators.TRIM_PREFIX_LEGGINGS);
+        itemModels.generateDynamicTrimmableItem(ModItems.SILVER_BOOTS.get(), itemModels.createFlatItemModel(ModItems.SILVER_BOOTS.get(), ModelTemplates.FLAT_ITEM), ItemModelGenerators.TRIM_PREFIX_BOOTS);
         itemModels.generateFlatItem(ModItems.SILVER_HORSE_ARMOR.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(ModItems.SILVER_NAUTILUS_ARMOR.get(), ModelTemplates.FLAT_ITEM);
     }
