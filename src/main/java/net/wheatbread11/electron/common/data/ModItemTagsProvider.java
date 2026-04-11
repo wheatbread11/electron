@@ -101,5 +101,8 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         this.tag(ItemTags.create(Identifier.withDefaultNamespace("metal_nuggets")))
                 .add(ModItems.SILVER_NUGGET.get())
                 .replace(false);
+        this.tag(ItemTags.create(Identifier.withDefaultNamespace("trim_materials")))
+                .add(ModItems.SILVER_INGOT.get())
+                .replace(false);
     }
 }

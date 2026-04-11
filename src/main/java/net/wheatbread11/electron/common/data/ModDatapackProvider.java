@@ -8,6 +8,7 @@ import net.neoforged.neoforge.common.data.DatapackBuiltinEntriesProvider;
 import net.neoforged.neoforge.registries.NeoForgeRegistries;
 import net.wheatbread11.electron.Electron;
 import net.wheatbread11.electron.common.world.ModBiomeModifiers;
+import net.wheatbread11.electron.content.world.item.equipment.ModTrimMaterials;
 import net.wheatbread11.electron.content.world.level.levelgen.feature.ModConfiguredFeatures;
 import net.wheatbread11.electron.content.world.level.levelgen.placement.ModPlacedFeatures;
 
@@ -17,6 +18,7 @@ import java.util.concurrent.CompletableFuture;
 public class ModDatapackProvider extends DatapackBuiltinEntriesProvider {
 
     public static  final RegistrySetBuilder BUILDER = new RegistrySetBuilder()
+            .add(Registries.TRIM_MATERIAL, ModTrimMaterials::bootstrap)
             .add(Registries.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap)
             .add(Registries.PLACED_FEATURE, ModPlacedFeatures::bootstrap)
             .add(NeoForgeRegistries.Keys.BIOME_MODIFIERS, ModBiomeModifiers::bootstrap);

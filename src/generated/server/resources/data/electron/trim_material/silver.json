@@ -1,0 +1,10 @@
+{
+  "asset_name": "silver",
+  "description": {
+    "color": "#D6C3FC",
+    "translate": "trim_material.electron.silver"
+  },
+  "override_armor_assets": {
+    "electron:silver": "silver_darker"
+  }
+}

@@ -27,5 +27,7 @@
   "item.electron.silver_leggings": "Silver Leggings",
   "item.electron.silver_boots": "Silver Boots",
   "item.electron.silver_horse_armor": "Silver Horse Armor",
-  "item.electron.silver_nautilus_armor": "Silver Nautilus Armor"
+  "item.electron.silver_nautilus_armor": "Silver Nautilus Armor",
+
+  "trim_material.electron.silver": "Silver Ingredient"
 }

@@ -1,11 +1,16 @@
 package net.wheatbread11.electron.content.world.item;
 
+import net.minecraft.core.component.DataComponents;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.*;
+import net.minecraft.world.item.component.ProvidesTrimMaterial;
 import net.minecraft.world.item.equipment.ArmorType;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.wheatbread11.electron.Electron;
 import net.wheatbread11.electron.content.world.item.equipment.ModArmorMaterials;
+import net.wheatbread11.electron.content.world.item.equipment.ModTrimMaterials;
 import net.wheatbread11.electron.content.world.level.block.ModBlocks;
 
 public class ModItems {
@@ -17,7 +22,12 @@ public class ModItems {
     public static final DeferredItem<Item> COPPER_DUST = ITEMS.registerSimpleItem("copper_dust");
     public static final DeferredItem<Item> SILVER_DUST = ITEMS.registerSimpleItem("silver_dust");
 
-    public static final DeferredItem<Item> SILVER_INGOT = ITEMS.registerSimpleItem("silver_ingot");
+    public static final DeferredItem<Item> SILVER_INGOT =
+            ITEMS.registerItem(
+                    "silver_ingot",
+                    Item::new,
+                    p -> new Item.Properties().trimMaterial(ModTrimMaterials.SILVER)
+            );
     public static final DeferredItem<Item> SILVER_NUGGET = ITEMS.registerSimpleItem("silver_nugget");
     public static final DeferredItem<Item> RAW_SILVER = ITEMS.registerSimpleItem("raw_silver");
 
